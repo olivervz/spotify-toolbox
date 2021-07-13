@@ -1,0 +1,38 @@
+body {
+    background-color: #4a4a4a;
+}
+
+.arrow-container {
+    position: absolute;
+    width: 100vw;
+    height: 59px;
+    top: calc((647 / 900) * 100vh);
+    display: flex;
+    justify-content: center;
+}
+
+.arrow {
+    position: absolute;
+    width: 58px;
+    height: 59px;
+    fill: none;
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}

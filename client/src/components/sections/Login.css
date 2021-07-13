@@ -8,17 +8,18 @@
 .login-title {
     position: absolute;
     margin: 0;
-    width: calc((739 / 1440) * 100vw);
-    height: calc((230 / 900) * 100vh);
-    left: calc((350 / 1440) * 100vw);
+    width: 100vw;
+    height: 230px;
     top: calc((172 / 900) * 100vh);
+    justify-content: center;
 
     font-family: Gill Sans;
     font-style: normal;
     font-weight: bold;
 
-    font-size: calc((90 / 1440) * 100vw);
-    line-height: calc((104 / 900) * 100vh);
+    /* font-size: max(50px, calc((90 / 1440) * 100vw)); */
+    font-size: max(50px, calc((90 / 1440) * 100vw));
+    line-height: 104px;
     display: flex;
     align-items: center;
     text-align: center;
@@ -26,13 +27,18 @@
     color: #25d977;
 }
 
-.login-button {
+.login-button-container {
     position: absolute;
-    width: calc((360 / 1440) * 100vw);
-    height: calc((96 / 900) * 100vh);
-    left: calc((540 / 1440) * 100vw);
+    height: 96px;
+    width: 100vw;
     top: calc((402 / 900) * 100vh);
+}
 
+.login-button {
+    position: relative;
+    width: max(200px, calc((360 / 1440) * 100vw));
+    height: calc((96 / 900) * 100vh);
+    margin: 0 auto;
     background: #25d977;
     box-shadow: 0px 16px 16px rgba(0, 0, 0, 0.4), 0px 12px 0px #198a4c,
         inset 0px 0px 3px rgba(255, 255, 255, 0.5),
@@ -41,22 +47,21 @@
 }
 
 .login-button-text {
-    position: absolute;
-    width: calc((315 / 1440) * 100vw);
-    height: calc((48 / 900) * 100vh);
-    left: calc((22 / 1440) * 100vw);
-    top: calc((24 / 900) * 100vh);
-    margin: 0 auto;
+    position: relative;
+    height: calc((96 / 900) * 100vh);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 
     /* avenir button text */
 
     font-family: Avenir Next;
     font-style: normal;
     font-weight: 600;
-    font-size: calc((30 / 1440) * 100vw);
-    line-height: calc((41 / 900) * 100vh);
-    text-align: center;
-    text-shadow: 0px 4px 4px 0px #00000040 inset;
+    font-size: max(15px, calc((30 / 1440) * 100vw));
+    line-height: 100%;
+    text-shadow: 0px 4px 4px 0px rgb(0, 0, 0, 0.4) inset;
 
     color: #4a4a4a;
 }

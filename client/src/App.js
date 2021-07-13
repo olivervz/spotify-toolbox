@@ -27,10 +27,16 @@ function App() {
                             <Redirect to="/login" />
                         </Route>
                         <Route path="/login">
-                            <Login updateToken={(tok) => updateToken(tok)} />
+                            <Login
+                                callback={false}
+                                updateToken={(tok) => updateToken(tok)}
+                            />
                         </Route>
                         <Route path="/callback">
-                            <Login updateToken={(tok) => updateToken(tok)} />
+                            <Login
+                                callback={true}
+                                updateToken={(tok) => updateToken(tok)}
+                            />
                         </Route>
                         <Route path="/privacy">
                             <Privacy />

@@ -10,16 +10,16 @@
     margin: 0;
     width: calc((739 / 1440) * 100vw);
     height: calc((230 / 900) * 100vh);
-    left: calc((350 / 1440) * 100vw);
-    top: calc((75 / 900) * 100vh);
+    left: calc((358 / 1440) * 100vw);
+    top: calc((125 / 900) * 100vh);
 
     font-family: Gill Sans;
     font-style: normal;
     font-weight: bold;
 
-    font-size: calc((90 / 1440) * 100vw);
+    font-size: calc((75 / 1440) * 100vw);
     line-height: calc((104 / 900) * 100vh);
-    text-align: center;
+    text-align: left;
 
     color: #25d977;
 }
@@ -41,5 +41,5 @@
     font-size: calc((25 / 1440) * 100vw);
     line-height: calc((41 / 900) * 100vh);
 
-    color: #25d977;
+    color: white;
 }
