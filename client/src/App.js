@@ -7,6 +7,8 @@ import {
 import { useState } from "react";
 import Login from "./components/sections/Login";
 import Home from "./components/sections/Home";
+import About from "./components/sections/About";
+import Privacy from "./components/sections/Privacy";
 
 function App() {
     const [token, setToken] = useState("");
@@ -29,6 +31,12 @@ function App() {
                         </Route>
                         <Route path="/callback">
                             <Login updateToken={(tok) => updateToken(tok)} />
+                        </Route>
+                        <Route path="/privacy">
+                            <Privacy />
+                        </Route>
+                        <Route path="/about">
+                            <About />
                         </Route>
                     </Switch>
                 </Router>

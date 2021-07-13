@@ -1,5 +1,6 @@
 import React from "react";
 import "./Login.css";
+import Footer from "../Footer";
 import queryString from "query-string";
 import { useEffect, useState } from "react";
 import Axios from "axios";
@@ -53,6 +54,7 @@ const Login = (props) => {
             <div className="login-button" onClick={getAuthorizationCode}>
                 <h2 className="login-button-text">Log in with Spotify.</h2>
             </div>
+            <Footer first="about" second="privacy" />
         </div>
     );
 };
