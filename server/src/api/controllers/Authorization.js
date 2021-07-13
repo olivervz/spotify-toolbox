@@ -20,7 +20,6 @@ exports.Authorization = (req, res) => {
         },
         json: true,
     };
-    console.log(process.env.REDIRECT_URI);
     request.post(authOptions, (error, response, body) => {
         if (error) {
             res.send(error);

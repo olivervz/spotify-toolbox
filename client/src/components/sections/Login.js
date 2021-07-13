@@ -11,9 +11,7 @@ const Login = (props) => {
         const getAccessToken = async (code) => {
             const url =
                 process.env.REACT_APP_API_URL + "/Authorization?code=" + code;
-            console.log(url);
             const response = await Axios.get(url);
-            console.log(response);
             if (response.data.error) {
                 console.error(response.data.error, response.error_description);
                 return null;
