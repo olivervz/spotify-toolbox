@@ -2,20 +2,275 @@ body {
     background-color: #4a4a4a;
 }
 
+.header-container {
+    position: absolute;
+    width: 100vw;
+    height: 131px;
+    left: 0px;
+    top: 0px;
+
+    background: #4a4a4a;
+}
+
+.home-title {
+    position: absolute;
+    width: 405px;
+    height: 131px;
+    left: 26px;
+    top: 0px;
+    margin: 0 auto;
+
+    /* subtitle */
+
+    font-family: Gill Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 58px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #25d977;
+}
+
+.sticky-header-container {
+    position: absolute;
+    width: 100vw;
+    height: 62px;
+    left: 0px;
+    top: 131px;
+
+    background: #4a4a4a;
+    box-shadow: 0px 3px 15px 5px rgba(0, 0, 0, 0.25);
+}
+
+.top-artists {
+    position: absolute;
+    width: 112px;
+    height: 34px;
+    left: 51px;
+    top: 11px;
+    margin: 0 auto;
+
+    /* avenir footer text */
+
+    font-family: Avenir Next;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 34px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #ffffff;
+}
+
+.generate-playlists {
+    position: absolute;
+    width: 200px;
+    height: 34px;
+    left: 268px;
+    top: 11px;
+    margin: 0 auto;
+
+    /* avenir footer text */
+
+    font-family: Avenir Next;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 34px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #ffffff;
+}
+
+.discover-artists {
+    position: absolute;
+    width: 175px;
+    height: 34px;
+    left: 573px;
+    top: 11px;
+    margin: 0 auto;
+
+    /* avenir footer text */
+
+    font-family: Avenir Next;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 34px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #ffffff;
+}
+
+.logout-button {
+    position: absolute;
+    width: 101px;
+    height: 44px;
+    left: 1306px;
+    top: 9px;
+
+    fill: none;
+    border: 2px solid #25d977;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.logout-button-text {
+    position: relative;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    /* avenir footer text */
+
+    font-family: Avenir Next;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 34px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #25d977;
+}
+
+.intro-container {
+    position: absolute;
+    width: 1440px;
+    height: 533px;
+    left: 0px;
+    top: 193px;
+}
+
+.profile-picture {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 349px;
+    top: 167px;
+
+    background: #c4c4c4;
+    border-radius: 100px;
+}
+.one-line {
+    position: absolute;
+    width: 74px;
+    height: 41px;
+    left: 584px;
+    top: 197px;
+    margin: 0 auto;
+
+    /* avenir h3 */
+
+    font-family: Avenir Next;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 41px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #ffffff;
+}
+.two-line {
+    position: absolute;
+    width: 318px;
+    height: 58px;
+    left: 584px;
+    top: 238px;
+    margin: 0 auto;
+
+    /* subtitle */
+
+    font-family: Gill Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 58px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #25d977;
+}
+.three-line {
+    position: absolute;
+    width: 392px;
+    height: 41px;
+    left: 584px;
+    top: 296px;
+    margin: 0 auto;
+
+    /* avenir h3 */
+
+    font-family: Avenir Next;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 41px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #ffffff;
+}
+.four-line {
+    position: absolute;
+    width: 511px;
+    height: 41px;
+    left: 464px;
+    top: 415px;
+    margin: 0 auto;
+
+    /* avenir h3 */
+
+    font-family: Avenir Next;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 41px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #ffffff;
+}
+
 .arrow-container {
     position: absolute;
     width: 100vw;
-    height: 59px;
-    top: calc((647 / 900) * 100vh);
+    height: calc((58 / 900) * 100vw);
+    top: calc((700 / 1440) * 100vw);
     display: flex;
     justify-content: center;
 }
 
 .arrow {
     position: absolute;
-    width: 58px;
-    height: 59px;
-    fill: none;
+    width: calc((58 / 1440) * 100vw);
+    height: calc((58 / 1440) * 100vw);
     -moz-animation: bounce 2s infinite;
     -webkit-animation: bounce 2s infinite;
     animation: bounce 2s infinite;
