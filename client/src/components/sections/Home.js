@@ -6,13 +6,14 @@ const Home = (props) => {
     const [username, setUsername] = useState("");
     const [profilePicture, setProfilePicture] = useState("");
 
-    useEffect(async () => {
+    useEffect(() => {
         const getUsername = async () => {
             const url =
                 process.env.REACT_APP_API_URL +
                 "/Username?token=" +
                 props.access_token;
-            const response = Axios.get(url);
+            const response = await Axios.get(url);
+            setUsername(response.data);
             return response;
         };
 
@@ -21,21 +22,18 @@ const Home = (props) => {
                 process.env.REACT_APP_API_URL +
                 "/ProfilePicture?token=" +
                 props.access_token;
-            const response = Axios.get(url);
+            const response = await Axios.get(url);
+            setProfilePicture(response.data);
             return response;
         };
-
-        const username = await getUsername();
-        setUsername(username.data);
-
-        const profilePicture = await getProfilePicture();
-        setProfilePicture(profilePicture.data);
-    }, []);
+        getUsername();
+        getProfilePicture();
+    }, [props.access_token]);
 
     return (
         <div>
             <h1>Hello {username}</h1>
-            <img src={profilePicture}></img>
+            <img src={profilePicture} alt="profile"></img>
         </div>
     );
 };

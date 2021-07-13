@@ -2,12 +2,12 @@ import React from "react";
 import "./Login.css";
 import Footer from "../Footer";
 import queryString from "query-string";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Axios from "axios";
 require("dotenv").config();
 
 const Login = (props) => {
-    useEffect(async () => {
+    useEffect(() => {
         const getAccessToken = async (code) => {
             const url =
                 process.env.REACT_APP_API_URL + "/Authorization?code=" + code;
@@ -16,7 +16,10 @@ const Login = (props) => {
                 console.error(response.data.error, response.error_description);
                 return null;
             } else {
-                return response.data.access_token;
+                const token = response.data.access_token;
+                if (token) {
+                    props.updateToken(token);
+                }
             }
         };
 
@@ -26,10 +29,7 @@ const Login = (props) => {
                 window.location.href.search("code=") + 5,
                 window.location.href.length
             );
-            const token = await getAccessToken(code);
-            if (token) {
-                props.updateToken(token);
-            }
+            getAccessToken(code);
         }
     });
 
