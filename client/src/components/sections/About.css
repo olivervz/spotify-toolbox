@@ -11,7 +11,7 @@
     width: calc((739 / 1440) * 100vw);
     height: calc((230 / 900) * 100vh);
     left: calc((350 / 1440) * 100vw);
-    top: calc((100 / 900) * 100vh);
+    top: calc((75 / 900) * 100vh);
 
     font-family: Gill Sans;
     font-style: normal;
@@ -20,6 +20,26 @@
     font-size: calc((90 / 1440) * 100vw);
     line-height: calc((104 / 900) * 100vh);
     text-align: center;
+
+    color: #25d977;
+}
+
+.about-text-container {
+    position: absolute;
+    width: calc((724 / 1440) * 100vw);
+    height: calc((542 / 900) * 100vh);
+    left: calc((358 / 1440) * 100vw);
+    top: calc((230 / 900) * 100vh);
+}
+
+.about-text {
+    position: absolute;
+
+    font-family: Avenir Next;
+    font-style: normal;
+    font-weight: normal;
+    font-size: calc((25 / 1440) * 100vw);
+    line-height: calc((41 / 900) * 100vh);
 
     color: #25d977;
 }
