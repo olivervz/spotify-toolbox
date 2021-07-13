@@ -1,4 +1,5 @@
 import React from "react";
+import "./Login.css";
 import queryString from "query-string";
 import { useEffect, useState } from "react";
 import Axios from "axios";
@@ -47,18 +48,10 @@ const Login = (props) => {
         window.location.href = url;
     };
     return (
-        <div>
-            <div style={{ textAlign: "center" }}>
-                <button
-                    style={{
-                        marginTop: "100px",
-                        width: "300px",
-                        height: "100px",
-                    }}
-                    onClick={getAuthorizationCode}
-                >
-                    {process.env.REACT_APP_TEST_VAR}
-                </button>
+        <div className="login-container">
+            <h1 className="login-title">Spotify Toolbox</h1>
+            <div className="login-button" onClick={getAuthorizationCode}>
+                <h2 className="login-button-text">Log in with Spotify.</h2>
             </div>
         </div>
     );
