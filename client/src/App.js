@@ -32,6 +32,7 @@ function App() {
                                 callback={false}
                                 updateToken={(tok) => updateToken(tok)}
                             />
+                            <Footer first="about" second="privacy" />
                         </Route>
                         <Route path="/callback">
                             <Login

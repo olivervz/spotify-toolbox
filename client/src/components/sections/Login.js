@@ -61,7 +61,6 @@ const Login = (props) => {
                             </h2>
                         </div>
                     </div>
-                    <Footer first="about" second="privacy" />
                 </div>
             ) : (
                 ""

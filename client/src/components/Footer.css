@@ -1,8 +1,9 @@
 .footer-container {
     position: relative;
+    background-color: #4a4a4a;
     width: 100vw;
     height: calc((73 / 900) * 100vh);
-    top: 88vh;
+    margin: 0 auto;
     padding-bottom: 2vh;
 }
 .github-icon-container {
