@@ -1,17 +1,15 @@
 .footer-container {
-    position: absolute;
-    width: calc((1389 / 1440) * 100vw);
+    position: relative;
+    width: 100vw;
     height: calc((73 / 900) * 100vh);
-    left: calc((25 / 1440) * 100vw);
-    /* top: calc((806 / 900) * 100vh); */
-    /* bottom: 20px; */
-    bottom: 3vh;
+    top: 88vh;
+    padding-bottom: 2vh;
 }
 .github-icon-container {
     position: absolute;
     width: calc((60 / 1440) * 100vw);
     height: calc((60 / 1440) * 100vw);
-    left: calc((1 / 1440) * 100vw);
+    left: 3vh;
     top: calc((7 / 900) * 100vh);
 }
 
@@ -34,7 +32,7 @@
     position: absolute;
     width: calc((91 / 1440) * 100vw);
     height: calc((73 / 900) * 100vh);
-    left: calc((1298 / 1440) * 100vw);
+    right: 3vh;
     top: 0px;
     text-align: left;
 }

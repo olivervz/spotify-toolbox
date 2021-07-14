@@ -9,6 +9,7 @@ import Login from "./components/sections/Login";
 import Home from "./components/sections/Home";
 import About from "./components/sections/About";
 import Privacy from "./components/sections/Privacy";
+import Footer from "./components/Footer";
 
 function App() {
     const [token, setToken] = useState("");

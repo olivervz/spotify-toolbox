@@ -49,7 +49,7 @@ const Login = (props) => {
     return (
         <div className="login-container">
             {!props.callback ? (
-                <>
+                <div>
                     <h1 className="login-title">Spotify Toolbox</h1>
                     <div className="login-button-container">
                         <div
@@ -62,7 +62,7 @@ const Login = (props) => {
                         </div>
                     </div>
                     <Footer first="about" second="privacy" />
-                </>
+                </div>
             ) : (
                 ""
             )}
