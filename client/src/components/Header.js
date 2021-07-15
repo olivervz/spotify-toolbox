@@ -1,14 +1,54 @@
 import React from "react";
+import { Link } from "react-scroll";
 import "./Header.css";
 
-const Header = () => {
+const Header = (props) => {
     return (
         <>
             <div className="sticky-header-container">
-                <h3 className="top-artists">top artists</h3>
-                <h3 className="generate-playlists">generate playlists</h3>
-                <h3 className="discover-artists">discover-artists</h3>
-                <div className="logout-button">
+                <Link
+                    activeClass="active"
+                    to="top-artists-section"
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                >
+                    <h3
+                        className="top-artists"
+                        onClick={props.linkTopArtists()}
+                    >
+                        top artists
+                    </h3>
+                </Link>
+                <Link
+                    activeClass="active"
+                    to="generate-playlists-section"
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                >
+                    <h3
+                        className="generate-playlists"
+                        onClick={props.linkGeneratePlaylists()}
+                    >
+                        generate playlists
+                    </h3>
+                </Link>
+                <Link
+                    activeClass="active"
+                    to="discover-artists-section"
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                >
+                    <h3
+                        className="discover-artists"
+                        onClick={props.linkDiscoverArtists()}
+                    >
+                        discover-artists
+                    </h3>
+                </Link>
+                <div className="logout-button" onClick={props.logout()}>
                     <h4 className="logout-button-text">log out</h4>
                 </div>
             </div>

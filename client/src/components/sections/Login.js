@@ -1,6 +1,5 @@
 import React from "react";
 import "./Login.css";
-import Footer from "../Footer";
 import queryString from "query-string";
 import { useEffect } from "react";
 import Axios from "axios";

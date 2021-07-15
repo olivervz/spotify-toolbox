@@ -1,9 +1,12 @@
 import React from "react";
 import Axios from "axios";
 import "./Home.css";
+import { Element } from "react-scroll";
 
 import Header from "../Header";
 import TopArtistsSection from "./TopArtistsSection";
+import GeneratePlaylistsSection from "./GeneratePlaylistsSection";
+import DiscoverArtistsSection from "./DiscoverArtistsSection";
 import IntroSection from "./IntroSection";
 import Footer from "../Footer";
 
@@ -37,11 +40,29 @@ const Home = (props) => {
         getProfilePicture();
     }, [props.access_token]);
 
+    const linkTopArtists = () => {};
+    const linkDiscoverArtists = () => {};
+    const linkGeneratePlaylists = () => {};
+    const logout = () => {};
+
     return (
         <div>
-            <Header />
+            <Header
+                linkTopArtists={linkTopArtists}
+                linkDiscoverArtists={linkDiscoverArtists}
+                linkGeneratePlaylists={linkGeneratePlaylists}
+                logout={logout}
+            />
             <IntroSection username={username} profilePicture={profilePicture} />
-            <TopArtistsSection />
+            <Element name="top-artists-section">
+                <TopArtistsSection />
+            </Element>
+            <Element name="generate-playlists-section">
+                <GeneratePlaylistsSection />
+            </Element>
+            <Element name="discover-artists-section">
+                <DiscoverArtistsSection />
+            </Element>
             <Footer first="about" second="privacy" />
         </div>
     );
