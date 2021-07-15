@@ -15,27 +15,27 @@ const TopArtistsSection = (props) => {
     const [topTracksLong, setTopTracksLong] = useState([]);
 
     useEffect(() => {
-        const fetchListening = async (type, timeRange) => {
+        const fetchListening = async (setter, type, timeRange) => {
             const url =
                 process.env.REACT_APP_API_URL +
                 "/ListeningData?token=" +
                 props.access_token +
-                "?type=" +
+                "&type=" +
                 type +
-                "?time_range=" +
+                "&time_range=" +
                 timeRange;
             const response = await Axios.get(url);
-            console.log(response);
-            return null;
+            setter(response.data);
         };
 
-        setTopArtistsShort(fetchListening("artists", "short_term"));
-        setTopArtistsMedium(fetchListening("artists", "medium_term"));
-        setTopArtistsLong(fetchListening("artists", "long_term"));
-        setTopTracksShort(fetchListening("tracks", "short_term"));
-        setTopTracksMedium(fetchListening("tracks", "medium_term"));
-        setTopTracksLong(fetchListening("tracks", "long_term"));
-    });
+        // var data = await fetchListening("artists", "short_term");
+        fetchListening(setTopArtistsShort, "artists", "short_term");
+        fetchListening(setTopArtistsMedium, "artists", "medium_term");
+        fetchListening(setTopArtistsLong, "artists", "long_term");
+        fetchListening(setTopTracksShort, "tracks", "short_term");
+        fetchListening(setTopTracksMedium, "tracks", "medium_term");
+        fetchListening(setTopTracksLong, "tracks", "long_term");
+    }, []);
 
     return (
         <div className="top-artists-container">

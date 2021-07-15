@@ -34,7 +34,7 @@ const Login = (props) => {
 
     const getAuthorizationCode = () => {
         const scope =
-            "user-read-private user-read-email playlist-modify-public playlist-modify-private ugc-image-upload";
+            "user-read-private user-read-email playlist-modify-public playlist-modify-private ugc-image-upload user-top-read";
         const url =
             "https://accounts.spotify.com/authorize?" +
             queryString.stringify({
