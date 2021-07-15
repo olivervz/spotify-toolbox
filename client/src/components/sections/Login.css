@@ -13,7 +13,7 @@
     top: calc((172 / 900) * 100vh);
     justify-content: center;
 
-    font-family: Gill Sans;
+    font-family: GillSansBold;
     font-style: normal;
     font-weight: bold;
 
@@ -55,7 +55,7 @@
 
     /* avenir button text */
 
-    font-family: Avenir Next;
+    font-family: AvenirMedium;
     font-style: normal;
     font-weight: 600;
     font-size: max(15px, calc((30 / 1440) * 100vw));

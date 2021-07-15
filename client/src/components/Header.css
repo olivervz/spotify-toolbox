@@ -19,7 +19,7 @@
 
     /* subtitle */
 
-    font-family: Gill Sans;
+    font-family: GillSansBold;
     font-style: normal;
     font-weight: bold;
     font-size: calc((50 / 1440) * 100vw);
@@ -52,7 +52,7 @@
 
     /* avenir footer text */
 
-    font-family: Avenir Next;
+    font-family: AvenirMedium;
     font-style: normal;
     font-weight: normal;
     font-size: calc((25 / 1440) * 100vw);
@@ -74,7 +74,7 @@
 
     /* avenir footer text */
 
-    font-family: Avenir Next;
+    font-family: AvenirMedium;
     font-style: normal;
     font-weight: normal;
     font-size: calc((25 / 1440) * 100vw);
@@ -96,7 +96,7 @@
 
     /* avenir footer text */
 
-    font-family: Avenir Next;
+    font-family: AvenirMedium;
     font-style: normal;
     font-weight: normal;
     font-size: calc((25 / 1440) * 100vw);
@@ -135,7 +135,7 @@
 
     /* avenir footer text */
 
-    font-family: Avenir Next;
+    font-family: AvenirMedium;
     font-style: normal;
     font-weight: normal;
     font-size: calc((25 / 1440) * 100vw);

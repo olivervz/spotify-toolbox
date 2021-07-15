@@ -8,6 +8,20 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+@font-face {
+    font-family: "AvenirMedium";
+    src: local("AvenirMedium"),
+        url("./fonts/AvenirNextLTPro/AvenirNextLTPro-Regular.otf")
+            format("truetype");
+    font-weight: medium;
+}
+@font-face {
+    font-family: "GillSansBold";
+    src: local("GillSansBold"),
+        url("./fonts/GillSans/GillSans-Bold.otf") format("truetype");
+    font-weight: medium;
+}
+
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
         monospace;
