@@ -1,7 +1,7 @@
 .top-artists-container {
     position: relative;
     z-index: 0;
-    height: 200vh;
+    height: 145vw;
     width: 100vw;
     background-color: #41a971;
 }

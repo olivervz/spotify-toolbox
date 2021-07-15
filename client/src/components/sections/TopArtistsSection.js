@@ -1,20 +1,23 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import Axios from "axios";
+import TopList from "../TopList";
 import "./TopArtistsSection.css";
 
 const TopArtistsSection = (props) => {
-    const [numberSelection, setNumberSelection] = useState(18);
+    const [numberSelection, setNumberSelection] = useState(10);
     const [artistsSelection, setArtistsSelection] = useState("artists");
-    const [timeSelection, setTimeSelection] = useState("month");
+    const [timeSelection, setTimeSelection] = useState("6 months");
     const [topArtistsShort, setTopArtistsShort] = useState([]);
     const [topArtistsMedium, setTopArtistsMedium] = useState([]);
     const [topArtistsLong, setTopArtistsLong] = useState([]);
     const [topTracksShort, setTopTracksShort] = useState([]);
     const [topTracksMedium, setTopTracksMedium] = useState([]);
     const [topTracksLong, setTopTracksLong] = useState([]);
+    var activeList = [];
 
     useEffect(() => {
+        console.log("useEffect");
         const fetchListening = async (setter, type, timeRange) => {
             const url =
                 process.env.REACT_APP_API_URL +
@@ -27,8 +30,6 @@ const TopArtistsSection = (props) => {
             const response = await Axios.get(url);
             setter(response.data);
         };
-
-        // var data = await fetchListening("artists", "short_term");
         fetchListening(setTopArtistsShort, "artists", "short_term");
         fetchListening(setTopArtistsMedium, "artists", "medium_term");
         fetchListening(setTopArtistsLong, "artists", "long_term");
@@ -36,6 +37,24 @@ const TopArtistsSection = (props) => {
         fetchListening(setTopTracksMedium, "tracks", "medium_term");
         fetchListening(setTopTracksLong, "tracks", "long_term");
     }, []);
+
+    if (artistsSelection === "tracks") {
+        if (timeSelection === "4 weeks") {
+            activeList = topTracksShort;
+        } else if (timeSelection === "6 months") {
+            activeList = topTracksMedium;
+        } else {
+            activeList = topTracksLong;
+        }
+    } else {
+        if (timeSelection === "4 weeks") {
+            activeList = topArtistsShort;
+        } else if (timeSelection === "6 months") {
+            activeList = topArtistsMedium;
+        } else {
+            activeList = topArtistsLong;
+        }
+    }
 
     return (
         <div className="top-artists-container">
@@ -158,6 +177,11 @@ const TopArtistsSection = (props) => {
                     all time
                 </h3>
             </div>
+            <TopList
+                number={numberSelection}
+                list={activeList}
+                artists={artistsSelection === "artists" ? true : false}
+            />
         </div>
     );
 };
