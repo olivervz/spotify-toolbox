@@ -55,13 +55,13 @@ const Home = (props) => {
             />
             <IntroSection username={username} profilePicture={profilePicture} />
             <Element name="top-artists-section">
-                <TopArtistsSection />
+                <TopArtistsSection access_token={props.access_token} />
             </Element>
             <Element name="generate-playlists-section">
-                <GeneratePlaylistsSection />
+                <GeneratePlaylistsSection access_token={props.access_token} />
             </Element>
             <Element name="discover-artists-section">
-                <DiscoverArtistsSection />
+                <DiscoverArtistsSection access_token={props.access_token} />
             </Element>
             <Footer first="about" second="privacy" />
         </div>

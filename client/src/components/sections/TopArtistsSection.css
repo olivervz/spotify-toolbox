@@ -5,3 +5,179 @@
     width: 100vw;
     background-color: #41a971;
 }
+
+.top-artists-title-container {
+    position: absolute;
+    width: 1440px;
+    height: 100px;
+    left: 0px;
+    top: 60px;
+    text-align: center;
+}
+
+.top-artists-title {
+    position: relative;
+    height: 100px;
+    top: 0px;
+    margin: 0 auto;
+}
+
+.top {
+    display: inline;
+    position: relative;
+    width: 68px;
+    height: 100px;
+    top: 0px;
+    margin: 0;
+
+    font-family: AvenirMedium;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 49px;
+
+    color: #4a4a4a;
+}
+
+.number {
+    display: inline;
+    position: relative;
+    width: 47px;
+    height: 100px;
+    top: 0px;
+    padding-right: 12px;
+    margin: 0;
+
+    font-family: Avenir Next;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 49px;
+    text-decoration-line: underline;
+
+    color: #4a4a4a;
+}
+.artists-tracks {
+    display: inline;
+    position: relative;
+    width: 106px;
+    height: 100px;
+    top: 0px;
+    margin: 0;
+
+    font-family: Avenir Next;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 49px;
+    text-decoration-line: underline;
+
+    color: #4a4a4a;
+}
+.of-the-past {
+    display: inline;
+    position: relative;
+    width: 175px;
+    height: 100px;
+    top: 0px;
+    margin: 0;
+
+    font-family: Avenir Next;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 49px;
+
+    color: #4a4a4a;
+}
+.of {
+    display: inline;
+    position: relative;
+    width: 175px;
+    height: 100px;
+    top: 0px;
+    margin: 0;
+
+    font-family: Avenir Next;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 49px;
+
+    color: #4a4a4a;
+}
+.time-period {
+    display: inline;
+    position: relative;
+    width: 165px;
+    height: 100px;
+    top: 0px;
+    margin: 0;
+
+    font-family: Avenir Next;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 49px;
+    text-decoration-line: underline;
+
+    color: #4a4a4a;
+}
+
+.edit-parameters-container {
+    position: absolute;
+    width: 161px;
+    height: 413px;
+    left: 106px;
+    top: 266px;
+}
+
+.select-50,
+.select-18,
+.select-10,
+.select-artists,
+.select-tracks,
+.select-4-weeks,
+.select-6-months,
+.select-all-time {
+    position: absolute;
+    width: 161px;
+    height: 41px;
+    left: 0px;
+
+    font-family: Avenir Next;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 41px;
+
+    display: flex;
+    align-items: center;
+
+    color: #ffffff;
+    cursor: pointer;
+}
+.select-50 {
+    top: 0px;
+}
+.select-18 {
+    top: 41px;
+}
+.select-10 {
+    top: 82px;
+}
+.select-artists {
+    top: 164px;
+}
+.select-tracks {
+    top: 205px;
+}
+.select-4-weeks {
+    top: 290px;
+}
+.select-6-months {
+    top: 331px;
+}
+.select-all-time {
+    top: 372px;
+}
