@@ -1,31 +1,34 @@
 .artist-card-container-10 {
     position: relative;
-    width: 280px;
-    height: 280px;
+    width: calc((280 / 1440) * 100vw);
+    height: calc((280 / 1440) * 100vw);
     display: inline-block;
 
     background: #4a4a4a;
-    border-radius: 12px;
-    margin-right: 50.5px;
-    margin-left: 50.5px;
-    margin-bottom: 101px;
+    border-radius: calc((12 / 1440) * 100vw);
+    margin-right: calc((50.5 / 1440) * 100vw);
+    margin-left: calc((50.5 / 1440) * 100vw);
+    margin-bottom: calc((101 / 1440) * 100vw);
     transition: all 0.5s ease;
 }
 .artist-card-10 {
     position: relative;
-    width: 280px;
-    height: 280px;
+    width: calc((280 / 1440) * 100vw);
+    height: calc((280 / 1440) * 100vw);
 
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    border-radius: 12px;
+    filter: drop-shadow(
+        0px calc((4 / 1440) * 100vw) calc((4 / 1440) * 100vw)
+            rgba(0, 0, 0, 0.25)
+    );
+    border-radius: calc((12 / 1440) * 100vw);
     transition: all 0.5s ease;
 }
 
 .artist-name-container-10 {
     position: absolute;
-    width: 280px;
-    height: 37px;
-    margin-top: -3.5vw;
+    width: calc((280 / 1440) * 100vw);
+    height: calc((37 / 1440) * 100vw);
+    margin-top: -6vw;
 
     background: rgba(0, 0, 0, 0.5);
     content-align: center;
@@ -34,15 +37,15 @@
 
 .artist-name-10 {
     position: absolute;
-    width: 280px;
-    height: 37px;
+    width: calc((280 / 1440) * 100vw);
+    height: calc((37 / 1440) * 100vw);
     margin: 0 auto;
 
     font-family: "AvenirMedium";
     font-style: normal;
     font-weight: 500;
-    font-size: 25px;
-    line-height: 37px;
+    font-size: calc((25 / 1440) * 100vw);
+    line-height: calc((37 / 1440) * 100vw);
 
     white-space: nowrap;
     overflow: hidden;
@@ -54,28 +57,28 @@
 
 .number-container-10 {
     position: absolute;
-    width: 40px;
-    height: 40px;
+    width: calc((40 / 1440) * 100vw);
+    height: calc((40 / 1440) * 100vw);
     margin: 0 auto;
-    margin-top: -19.65vw;
+    top: 0px;
 
     background: rgba(0, 0, 0, 0.6);
-    border-radius: 12px 0px 0px 0px;
+    border-radius: calc((12 / 1440) * 100vw) 0px 0px 0px;
     transition: all 0.5s ease;
 }
 
 .number-text-10 {
     position: relative;
-    width: 40px;
-    height: 40px;
+    width: calc((40 / 1440) * 100vw);
+    height: calc((40 / 1440) * 100vw);
     margin: 0 auto;
     padding-top: 0.2vw;
 
     font-family: "AvenirMedium";
     font-style: normal;
     font-weight: 500;
-    font-size: 25px;
-    line-height: 40px;
+    font-size: calc((25 / 1440) * 100vw);
+    line-height: calc((40 / 1440) * 100vw);
 
     color: #ffffff;
     transition: all 0.5s ease;
@@ -83,32 +86,36 @@
 
 .artist-card-container-18 {
     position: relative;
-    width: 260px;
-    height: 260px;
+    width: calc((260 / 1440) * 100vw);
+    height: calc((260 / 1440) * 100vw);
     display: inline-block;
 
     background: #4a4a4a;
-    border-radius: 12px;
-    margin-right: 20px;
-    margin-left: 20px;
-    margin-bottom: 40px;
+    border-radius: calc((12 / 1440) * 100vw);
+    margin-right: calc((20 / 1440) * 100vw);
+    margin-left: calc((20 / 1440) * 100vw);
+    margin-bottom: calc((40 / 1440) * 100vw);
     transition: all 0.5s ease;
 }
+
 .artist-card-18 {
     position: relative;
-    width: 260px;
-    height: 260px;
+    width: calc((260 / 1440) * 100vw);
+    height: calc((260 / 1440) * 100vw);
 
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    border-radius: 12px;
+    filter: drop-shadow(
+        0px calc((4 / 1440) * 100vw) calc((4 / 1440) * 100vw)
+            rgba(0, 0, 0, 0.25)
+    );
+    border-radius: calc((12 / 1440) * 100vw);
     transition: all 0.5s ease;
 }
 
 .artist-name-container-18 {
     position: absolute;
-    width: 260px;
-    height: 37px;
-    margin-top: -5vw;
+    width: calc((260 / 1440) * 100vw);
+    height: calc((37 / 1440) * 100vw);
+    margin-top: -6vw;
 
     background: rgba(0, 0, 0, 0.6);
     content-align: center;
@@ -117,15 +124,15 @@
 
 .artist-name-18 {
     position: absolute;
-    width: 260px;
-    height: 37px;
+    width: calc((260 / 1440) * 100vw);
+    height: calc((37 / 1440) * 100vw);
     margin: 0 auto;
 
     font-family: "AvenirMedium";
     font-style: normal;
     font-weight: 500;
-    font-size: 25px;
-    line-height: 37px;
+    font-size: calc((25 / 1440) * 100vw);
+    line-height: calc((37 / 1440) * 100vw);
 
     white-space: nowrap;
     overflow: hidden;
@@ -137,27 +144,27 @@
 
 .number-container-18 {
     position: absolute;
-    width: 40px;
-    height: 40px;
+    width: calc((40 / 1440) * 100vw);
+    height: calc((40 / 1440) * 100vw);
     margin: 0 auto;
-    margin-top: -18.25vw;
+    top: 0px;
 
     background: rgba(0, 0, 0, 0.4);
-    border-radius: 12px 0px 0px 0px;
+    border-radius: calc((12 / 1440) * 100vw) 0px 0px 0px;
     transition: all 0.5s ease;
 }
 
 .number-text-18 {
     position: relative;
-    width: 40px;
-    height: 40px;
+    width: calc((40 / 1440) * 100vw);
+    height: calc((40 / 1440) * 100vw);
     margin: 0 auto;
 
     font-family: "AvenirMedium";
     font-style: normal;
     font-weight: 500;
-    font-size: 20px;
-    line-height: 40px;
+    font-size: calc((20 / 1440) * 100vw);
+    line-height: calc((40 / 1440) * 100vw);
 
     color: #ffffff;
     transition: all 0.5s ease;
@@ -165,32 +172,35 @@
 
 .artist-card-container-50 {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: calc((200 / 1440) * 100vw);
+    height: calc((200 / 1440) * 100vw);
     display: inline-block;
 
     background: #4a4a4a;
-    border-radius: 12px;
-    margin-right: 12px;
-    margin-left: 12px;
-    margin-bottom: 24px;
+    border-radius: calc((12 / 1440) * 100vw);
+    margin-right: calc((12 / 1440) * 100vw);
+    margin-left: calc((12 / 1440) * 100vw);
+    margin-bottom: calc((24 / 1440) * 100vw);
     transition: all 0.5s ease;
 }
 .artist-card-50 {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: calc((200 / 1440) * 100vw);
+    height: calc((200 / 1440) * 100vw);
 
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    border-radius: 12px;
+    filter: drop-shadow(
+        0px calc((4 / 1440) * 100vw) calc((4 / 1440) * 100vw)
+            rgba(0, 0, 0, 0.25)
+    );
+    border-radius: calc((12 / 1440) * 100vw);
     transition: all 0.5s ease;
 }
 
 .artist-name-container-50 {
     position: absolute;
-    width: 200px;
-    height: 25px;
-    margin-top: -3vw;
+    width: calc((200 / 1440) * 100vw);
+    height: calc((25 / 1440) * 100vw);
+    margin-top: -4.5vw;
 
     background: rgba(0, 0, 0, 0.6);
     content-align: center;
@@ -199,15 +209,15 @@
 
 .artist-name-50 {
     position: absolute;
-    width: 200px;
-    height: 25px;
+    width: calc((200 / 1440) * 100vw);
+    height: calc((25 / 1440) * 100vw);
     margin: 0 auto;
 
     font-family: "AvenirMedium";
     font-style: normal;
     font-weight: 560;
-    font-size: 14px;
-    line-height: 25px;
+    font-size: calc((14 / 1440) * 100vw);
+    line-height: calc((25 / 1440) * 100vw);
 
     white-space: nowrap;
     overflow: hidden;
@@ -219,35 +229,35 @@
 
 .number-container-50 {
     position: absolute;
-    width: 35px;
-    height: 35px;
+    width: calc((35 / 1440) * 100vw);
+    height: calc((35 / 1440) * 100vw);
     margin: 0 auto;
-    margin-top: -14.1vw;
+    top: 0px;
 
     background: rgba(0, 0, 0, 0.4);
-    border-radius: 12px 0px 0px 0px;
+    border-radius: calc((12 / 1440) * 100vw) 0px 0px 0px;
     transition: all 0.5s ease;
 }
 
 .number-text-50 {
     position: relative;
-    width: 35px;
-    height: 35px;
+    width: calc((35 / 1440) * 100vw);
+    height: calc((35 / 1440) * 100vw);
     margin: 0 auto;
     padding-top: 0.2vw;
 
     font-family: "AvenirMedium";
     font-style: normal;
     font-weight: 500;
-    font-size: 20px;
-    line-height: 35px;
+    font-size: calc((20 / 1440) * 100vw);
+    line-height: calc((35 / 1440) * 100vw);
 
     color: #ffffff;
     transition: all 0.5s ease;
 }
 
-.artist-card-container-10,
-.artist-card-container-18,
+.artist-card-container-10:hover,
+.artist-card-container-18:hover,
 .artist-card-container-50:hover {
     cursor: pointer;
     transform: translate(0, -0.2vw);

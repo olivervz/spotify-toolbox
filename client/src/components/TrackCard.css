@@ -1,60 +1,7 @@
-.track-card-container-10 {
-    position: relative;
-    width: 280px;
-    height: 280px;
-    display: inline-block;
-
-    background: #4a4a4a;
-    border-radius: 12px;
-    margin-right: 50.5px;
-    margin-left: 50.5px;
-    margin-bottom: 101px;
-    transition: all 0.5s ease;
-}
-.track-card-10 {
-    position: relative;
-    width: 280px;
-    height: 280px;
-
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    border-radius: 12px;
-    transition: all 0.5s ease;
-}
-
-.artist-name-container-10 {
-    position: absolute;
-    width: 280px;
-    height: 37px;
-    margin-top: -5.9vw;
-
-    background: rgba(0, 0, 0, 0.5);
-    transition: all 0.5s ease;
-}
-
-.artist-name-10 {
-    position: absolute;
-    width: 280px;
-    height: 37px;
-    margin: 0 auto;
-
-    font-family: "AvenirMedium";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 25px;
-    line-height: 37px;
-
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-
-    color: #ffffff;
-    transition: all 0.5s ease;
-}
-
 .track-name-container-10 {
     position: absolute;
-    width: 280px;
-    height: 27px;
+    width: calc((280 / 1440) * 100vw);
+    height: calc((27 / 1440) * 100vw);
     margin-top: -3vw;
 
     background: rgba(0, 0, 0, 0.5);
@@ -63,98 +10,15 @@
 
 .track-name-10 {
     position: absolute;
-    width: 280px;
-    height: 27px;
+    width: calc((280 / 1440) * 100vw);
+    height: calc((27 / 1440) * 100vw);
     margin: 0 auto;
 
     font-family: "AvenirMedium";
     font-style: normal;
     font-weight: 500;
-    font-size: 15px;
-    line-height: 27px;
-
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-
-    color: #ffffff;
-    transition: all 0.5s ease;
-}
-
-.number-container-10 {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    margin: 0 auto;
-    margin-top: -19.65vw;
-
-    background: rgba(0, 0, 0, 0.4);
-    border-radius: 12px 0px 0px 0px;
-    transition: all 0.5s ease;
-}
-
-.number-text-10 {
-    position: relative;
-    width: 40px;
-    height: 40px;
-    margin: 0 auto;
-    padding-top: 0.2vw;
-
-    font-family: "AvenirMedium";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 25px;
-    line-height: 40px;
-
-    color: #ffffff;
-    transition: all 0.5s ease;
-}
-
-.track-card-container-18 {
-    position: relative;
-    width: 260px;
-    height: 260px;
-    display: inline-block;
-
-    background: #4a4a4a;
-    border-radius: 12px;
-    margin-right: 20px;
-    margin-left: 20px;
-    margin-bottom: 40px;
-    transition: all 0.5s ease;
-}
-.track-card-18 {
-    position: relative;
-    width: 260px;
-    height: 260px;
-
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    border-radius: 12px;
-    transition: all 0.5s ease;
-}
-
-.artist-name-container-18 {
-    position: absolute;
-    width: 260px;
-    height: 37px;
-    margin-top: -6vw;
-
-    background: rgba(0, 0, 0, 0.6);
-    content-align: center;
-    transition: all 0.5s ease;
-}
-
-.artist-name-18 {
-    position: absolute;
-    width: 260px;
-    height: 37px;
-    margin: 0 auto;
-
-    font-family: "AvenirMedium";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 25px;
-    line-height: 37px;
+    font-size: calc((15 / 1440) * 100vw);
+    line-height: calc((27 / 1440) * 100vw);
 
     white-space: nowrap;
     overflow: hidden;
@@ -166,8 +30,8 @@
 
 .track-name-container-18 {
     position: absolute;
-    width: 260px;
-    height: 27px;
+    width: calc((260 / 1440) * 100vw);
+    height: calc((27 / 1440) * 100vw);
     margin-top: -3vw;
 
     background: rgba(0, 0, 0, 0.5);
@@ -176,15 +40,15 @@
 
 .track-name-18 {
     position: absolute;
-    width: 260px;
-    height: 27px;
+    width: calc((260 / 1440) * 100vw);
+    height: calc((27 / 1440) * 100vw);
     margin: 0 auto;
 
     font-family: "AvenirMedium";
     font-style: normal;
     font-weight: 500;
-    font-size: 15px;
-    line-height: 27px;
+    font-size: calc((15 / 1440) * 100vw);
+    line-height: calc((27 / 1440) * 100vw);
 
     white-space: nowrap;
     overflow: hidden;
@@ -193,93 +57,11 @@
     color: #ffffff;
     transition: all 0.5s ease;
 }
-
-.number-container-18 {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    margin: 0 auto;
-    margin-top: -18.25vw;
-
-    background: rgba(0, 0, 0, 0.4);
-    border-radius: 12px 0px 0px 0px;
-    transition: all 0.5s ease;
-}
-
-.number-text-18 {
-    position: relative;
-    width: 40px;
-    height: 40px;
-    margin: 0 auto;
-
-    font-family: "AvenirMedium";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 40px;
-
-    color: #ffffff;
-    transition: all 0.5s ease;
-}
-
-.track-card-container-50 {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    display: inline-block;
-
-    background: #4a4a4a;
-    border-radius: 12px;
-    margin-right: 12px;
-    margin-left: 12px;
-    margin-bottom: 24px;
-    transition: all 0.5s ease;
-}
-.track-card-50 {
-    position: relative;
-    width: 200px;
-    height: 200px;
-
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    border-radius: 12px;
-    transition: all 0.5s ease;
-}
-
-.artist-name-container-50 {
-    position: absolute;
-    width: 200px;
-    height: 25px;
-    margin-top: -5vw;
-
-    background: rgba(0, 0, 0, 0.6);
-    content-align: center;
-    transition: all 0.5s ease;
-}
-
-.artist-name-50 {
-    position: absolute;
-    width: 200px;
-    height: 25px;
-    margin: 0 auto;
-
-    font-family: "AvenirMedium";
-    font-style: normal;
-    font-weight: 560;
-    font-size: 14px;
-    line-height: 25px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-
-    color: #ffffff;
-    transition: all 0.5s ease;
-}
-
 .track-name-container-50 {
     position: absolute;
-    width: 200px;
-    height: 20px;
-    margin-top: -3vw;
+    width: calc((200 / 1440) * 100vw);
+    height: calc((20 / 1440) * 100vw);
+    margin-top: -2.5vw;
 
     background: rgba(0, 0, 0, 0.5);
     transition: all 0.5s ease;
@@ -287,15 +69,15 @@
 
 .track-name-50 {
     position: absolute;
-    width: 200px;
-    height: 20px;
+    width: calc((200 / 1440) * 100vw);
+    height: calc((20 / 1440) * 100vw);
     margin: 0 auto;
 
     font-family: "AvenirMedium";
     font-style: normal;
     font-weight: 560;
-    font-size: 13px;
-    line-height: 20px;
+    font-size: calc((13 / 1440) * 100vw);
+    line-height: calc((20 / 1440) * 100vw);
 
     white-space: nowrap;
     overflow: hidden;
@@ -303,40 +85,4 @@
 
     color: #ffffff;
     transition: all 0.5s ease;
-}
-
-.number-container-50 {
-    position: absolute;
-    width: 35px;
-    height: 35px;
-    margin: 0 auto;
-    margin-top: -14.1vw;
-
-    background: rgba(0, 0, 0, 0.4);
-    border-radius: 12px 0px 0px 0px;
-    transition: all 0.5s ease;
-}
-
-.number-text-50 {
-    position: relative;
-    width: 35px;
-    height: 35px;
-    margin: 0 auto;
-    padding-top: 0.2vw;
-
-    font-family: "AvenirMedium";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 35px;
-
-    color: #ffffff;
-    transition: all 0.5s ease;
-}
-
-.track-card-container-10,
-.track-card-container-18,
-.track-card-container-50:hover {
-    cursor: pointer;
-    transform: translate(0, -0.2vw);
 }

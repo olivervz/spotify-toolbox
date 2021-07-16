@@ -10,10 +10,10 @@
 
 .top-artists-title-container {
     position: relative;
-    width: 1440px;
-    height: 100px;
+    width: 100vw;
+    height: calc((100 / 1440) * 100vw);
     left: 0px;
-    top: 60px;
+    top: calc((60 / 1440) * 100vw);
     text-align: center;
 }
 
@@ -24,114 +24,59 @@
     margin: 0 auto;
 }
 
-.top {
-    display: inline;
-    position: relative;
-    width: 68px;
-    height: 100px;
-    top: 0px;
-    margin: 0;
-
-    font-family: AvenirMedium;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 36px;
-    line-height: 49px;
-
-    color: #4a4a4a;
-}
-
-.number {
-    display: inline;
-    position: relative;
-    width: 47px;
-    height: 100px;
-    top: 0px;
-    padding-right: 12px;
-    margin: 0;
-
-    font-family: Avenir Next;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 49px;
-    text-decoration-line: underline;
-
-    color: #4a4a4a;
-}
-.artists-tracks {
-    display: inline;
-    position: relative;
-    width: 106px;
-    height: 100px;
-    top: 0px;
-    margin: 0;
-
-    font-family: Avenir Next;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 49px;
-    text-decoration-line: underline;
-
-    color: #4a4a4a;
-}
-.of-the-past {
-    display: inline;
-    position: relative;
-    width: 175px;
-    height: 100px;
-    top: 0px;
-    margin: 0;
-
-    font-family: Avenir Next;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 36px;
-    line-height: 49px;
-
-    color: #4a4a4a;
-}
-.of {
-    display: inline;
-    position: relative;
-    width: 175px;
-    height: 100px;
-    top: 0px;
-    margin: 0;
-
-    font-family: Avenir Next;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 36px;
-    line-height: 49px;
-
-    color: #4a4a4a;
-}
+.top,
+.number,
+.artists-tracks,
+.of-the-past,
+.of,
 .time-period {
     display: inline;
     position: relative;
-    width: 165px;
-    height: 100px;
+    height: calc((100 / 1440) * 100vw);
     top: 0px;
     margin: 0;
 
-    font-family: Avenir Next;
+    font-family: "AvenirMedium";
     font-style: normal;
-    font-weight: bold;
-    font-size: 36px;
+    font-size: calc((36 / 1440) * 100vw);
     line-height: 49px;
-    text-decoration-line: underline;
 
     color: #4a4a4a;
+}
+
+.top {
+    width: calc((68 / 1440) * 100vw);
+}
+
+.number {
+    width: calc((47 / 1440) * 100vw);
+    padding-right: calc((12 / 1440) * 100vw);
+    font-weight: bold;
+    text-decoration-line: underline;
+}
+.artists-tracks {
+    width: calc((106 / 1440) * 100vw);
+    font-weight: bold;
+    text-decoration-line: underline;
+}
+.of-the-past {
+    width: calc((175 / 1440) * 100vw);
+}
+.of {
+    width: calc((175 / 1440) * 100vw);
+}
+.time-period {
+    width: calc((165 / 1440) * 100vw);
+    font-weight: bold;
+    text-decoration-line: underline;
 }
 
 .edit-parameters-container {
     position: absolute;
-    width: 161px;
-    height: 413px;
-    left: 106px;
-    top: 266px;
+    width: calc((161 / 1440) * 100vw);
+    height: calc((413 / 1440) * 100vw);
+    left: calc((106 / 1440) * 100vw);
+    top: calc((266 / 1440) * 100vw);
 }
 
 .select-50,
@@ -143,14 +88,14 @@
 .select-6-months,
 .select-all-time {
     position: absolute;
-    width: 161px;
-    height: 41px;
+    width: calc((161 / 1440) * 100vw);
+    height: calc((41 / 1440) * 100vw);
     left: 0px;
 
-    font-family: Avenir Next;
+    font-family: "AvenirMedium";
     font-style: normal;
     font-weight: 500;
-    font-size: 30px;
+    font-size: calc((30 / 1440) * 100vw);
     line-height: 41px;
 
     display: flex;
@@ -163,25 +108,25 @@
     top: 0px;
 }
 .select-18 {
-    top: 41px;
+    top: calc((41 / 1440) * 100vw);
 }
 .select-10 {
-    top: 82px;
+    top: calc((82 / 1440) * 100vw);
 }
 .select-artists {
-    top: 164px;
+    top: calc((164 / 1440) * 100vw);
 }
 .select-tracks {
-    top: 205px;
+    top: calc((205 / 1440) * 100vw);
 }
 .select-4-weeks {
-    top: 290px;
+    top: calc((290 / 1440) * 100vw);
 }
 .select-6-months {
-    top: 331px;
+    top: calc((331 / 1440) * 100vw);
 }
 .select-all-time {
-    top: 372px;
+    top: calc((372 / 1440) * 100vw);
 }
 
 .select-50:hover,

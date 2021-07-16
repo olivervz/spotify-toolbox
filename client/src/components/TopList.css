@@ -1,9 +1,9 @@
 .top-list-container {
     position: relative;
-    width: 906px;
+    width: calc((906 / 1440) * 100vw);
     height: auto;
-    left: 267px;
-    top: 75px;
+    left: calc((267 / 1440) * 100vw);
+    top: calc((75 / 1440) * 100vw);
     display: inline-block;
     text-align: center;
 }
