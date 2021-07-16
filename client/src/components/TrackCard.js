@@ -12,6 +12,8 @@ const TrackCard = (props) => {
                 onClick={() => {
                     window.location.href = props.popupURL;
                 }}
+                data-aos="zoom-in"
+                data-aos-duration={1000 + props.number * 500}
             >
                 <img
                     src={props.image}
@@ -36,6 +38,8 @@ const TrackCard = (props) => {
                 onClick={() => {
                     window.location.href = props.popupURL;
                 }}
+                data-aos="zoom-in"
+                data-aos-duration={1000 + props.number * 500}
             >
                 <img
                     src={props.image}
@@ -54,12 +58,15 @@ const TrackCard = (props) => {
             </div>
         );
     } else {
+        console.log(1000 + props.number * 500);
         card = (
             <div
                 className="artist-card-container-50"
                 onClick={() => {
                     window.location.href = props.popupURL;
                 }}
+                data-aos="zoom-in"
+                data-aos-duration={1000 + props.number * 500}
             >
                 <img
                     src={props.image}

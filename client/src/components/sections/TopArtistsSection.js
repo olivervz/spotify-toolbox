@@ -59,7 +59,7 @@ const TopArtistsSection = (props) => {
     return (
         <div className="top-artists-container">
             <div className="top-artists-title-container">
-                <div className="top-artists-title">
+                <div className="top-artists-title" data-aos="fade-in">
                     <h1 className="top">Your top </h1>
                     <h1 className="number">{numberSelection}</h1>
                     <h1 className="artists-tracks">{artistsSelection}</h1>

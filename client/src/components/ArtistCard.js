@@ -10,6 +10,8 @@ const ArtistCard = (props) => {
                 onClick={() => {
                     window.location.href = props.popupURL;
                 }}
+                data-aos="zoom-in"
+                data-aos-duration={1000 + props.number * 500}
             >
                 <img
                     src={props.image}
@@ -31,6 +33,8 @@ const ArtistCard = (props) => {
                 onClick={() => {
                     window.location.href = props.popupURL;
                 }}
+                data-aos="zoom-in"
+                data-aos-duration={1000 + props.number * 500}
             >
                 <img
                     src={props.image}
@@ -52,6 +56,8 @@ const ArtistCard = (props) => {
                 onClick={() => {
                     window.location.href = props.popupURL;
                 }}
+                data-aos="zoom-in"
+                data-aos-duration={1000 + props.number * 500}
             >
                 <img
                     src={props.image}

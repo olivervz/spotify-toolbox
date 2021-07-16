@@ -9,7 +9,7 @@
     margin-right: calc((50.5 / 1440) * 100vw);
     margin-left: calc((50.5 / 1440) * 100vw);
     margin-bottom: calc((101 / 1440) * 100vw);
-    transition: all 0.5s ease;
+    /* transition: all 0.5s ease; */
 }
 .artist-card-10 {
     position: relative;
@@ -21,7 +21,7 @@
             rgba(0, 0, 0, 0.25)
     );
     border-radius: calc((12 / 1440) * 100vw);
-    transition: all 0.5s ease;
+    /* transition: all 0.5s ease; */
 }
 
 .artist-name-container-10 {
@@ -32,7 +32,7 @@
 
     background: rgba(0, 0, 0, 0.5);
     content-align: center;
-    transition: all 0.5s ease;
+    /* transition: all 0.5s ease; */
 }
 
 .artist-name-10 {
@@ -52,7 +52,7 @@
     text-overflow: ellipsis;
 
     color: #ffffff;
-    transition: all 0.5s ease;
+    /* transition: all 0.5s ease; */
 }
 
 .number-container-10 {
@@ -64,7 +64,7 @@
 
     background: rgba(0, 0, 0, 0.6);
     border-radius: calc((12 / 1440) * 100vw) 0px 0px 0px;
-    transition: all 0.5s ease;
+    /* transition: all 0.5s ease; */
 }
 
 .number-text-10 {
@@ -81,7 +81,7 @@
     line-height: calc((40 / 1440) * 100vw);
 
     color: #ffffff;
-    transition: all 0.5s ease;
+    /* transition: all 0.5s ease; */
 }
 
 .artist-card-container-18 {
@@ -95,7 +95,7 @@
     margin-right: calc((20 / 1440) * 100vw);
     margin-left: calc((20 / 1440) * 100vw);
     margin-bottom: calc((40 / 1440) * 100vw);
-    transition: all 0.5s ease;
+    /* transition: all 0.5s ease; */
 }
 
 .artist-card-18 {
@@ -108,7 +108,7 @@
             rgba(0, 0, 0, 0.25)
     );
     border-radius: calc((12 / 1440) * 100vw);
-    transition: all 0.5s ease;
+    /* transition: all 0.5s ease; */
 }
 
 .artist-name-container-18 {
@@ -119,7 +119,7 @@
 
     background: rgba(0, 0, 0, 0.6);
     content-align: center;
-    transition: all 0.5s ease;
+    /* transition: all 0.5s ease; */
 }
 
 .artist-name-18 {
@@ -139,7 +139,7 @@
     text-overflow: ellipsis;
 
     color: #ffffff;
-    transition: all 0.5s ease;
+    /* transition: all 0.5s ease; */
 }
 
 .number-container-18 {
@@ -151,7 +151,7 @@
 
     background: rgba(0, 0, 0, 0.4);
     border-radius: calc((12 / 1440) * 100vw) 0px 0px 0px;
-    transition: all 0.5s ease;
+    /* transition: all 0.5s ease; */
 }
 
 .number-text-18 {
@@ -167,7 +167,7 @@
     line-height: calc((40 / 1440) * 100vw);
 
     color: #ffffff;
-    transition: all 0.5s ease;
+    /* transition: all 0.5s ease; */
 }
 
 .artist-card-container-50 {
@@ -181,7 +181,7 @@
     margin-right: calc((12 / 1440) * 100vw);
     margin-left: calc((12 / 1440) * 100vw);
     margin-bottom: calc((24 / 1440) * 100vw);
-    transition: all 0.5s ease;
+    /* transition: all 0.5s ease; */
 }
 .artist-card-50 {
     position: relative;
@@ -193,7 +193,7 @@
             rgba(0, 0, 0, 0.25)
     );
     border-radius: calc((12 / 1440) * 100vw);
-    transition: all 0.5s ease;
+    /* transition: all 0.5s ease; */
 }
 
 .artist-name-container-50 {
@@ -204,7 +204,7 @@
 
     background: rgba(0, 0, 0, 0.6);
     content-align: center;
-    transition: all 0.5s ease;
+    /* transition: all 0.5s ease; */
 }
 
 .artist-name-50 {
@@ -224,7 +224,7 @@
     text-overflow: ellipsis;
 
     color: #ffffff;
-    transition: all 0.5s ease;
+    /* transition: all 0.5s ease; */
 }
 
 .number-container-50 {
@@ -236,7 +236,7 @@
 
     background: rgba(0, 0, 0, 0.4);
     border-radius: calc((12 / 1440) * 100vw) 0px 0px 0px;
-    transition: all 0.5s ease;
+    /* transition: all 0.5s ease; */
 }
 
 .number-text-50 {
@@ -253,7 +253,7 @@
     line-height: calc((35 / 1440) * 100vw);
 
     color: #ffffff;
-    transition: all 0.5s ease;
+    /* transition: all 0.5s ease; */
 }
 
 .artist-card-container-10:hover,

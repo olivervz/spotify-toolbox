@@ -10,6 +10,9 @@ import DiscoverArtistsSection from "./DiscoverArtistsSection";
 import IntroSection from "./IntroSection";
 import Footer from "../Footer";
 
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 import { useEffect, useState } from "react";
 
 const Home = (props) => {
@@ -36,6 +39,9 @@ const Home = (props) => {
             setProfilePicture(response.data);
             return response;
         };
+
+        Aos.init({ duration: 1500 });
+
         getUsername();
         getProfilePicture();
     }, [props.access_token]);
