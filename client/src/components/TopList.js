@@ -8,14 +8,17 @@ const TopList = (props) => {
 
     return (
         <div className="top-list-container">
-            <ul className="top-list-10">
+            <ul className="top-list">
                 {list.map((item, i) => {
                     if (props.artists) {
                         return (
                             <ArtistCard
+                                size={props.number}
                                 number={i}
                                 name={item.name}
                                 image={item.images[0].url}
+                                webURL={item.external_urls.spotify}
+                                popupURL={item.uri}
                             />
                         );
                     } else {
@@ -24,11 +27,15 @@ const TopList = (props) => {
                         }
                         return (
                             <TrackCard
+                                size={props.number}
                                 number={i}
                                 trackName={item.name}
                                 albumName={item.album.name}
                                 artistName={item.album.artists[0].name}
                                 image={item.album.images[0].url}
+                                webURL={item.external_urls.spotify}
+                                popupURL={item.uri}
+                                previewURL={item.preview_url}
                             />
                         );
                     }

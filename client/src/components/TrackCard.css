@@ -1,4 +1,4 @@
-.track-card-container {
+.track-card-container-10 {
     position: relative;
     width: 280px;
     height: 280px;
@@ -10,7 +10,7 @@
     margin-left: 50.5px;
     margin-bottom: 101px;
 }
-.track-card {
+.track-card-10 {
     position: relative;
     width: 280px;
     height: 280px;
@@ -19,16 +19,16 @@
     border-radius: 12px;
 }
 
-.artist-name-container {
+.artist-name-container-10 {
     position: absolute;
     width: 280px;
     height: 37px;
-    margin-top: -5.5vw;
+    margin-top: -5.9vw;
 
     background: rgba(0, 0, 0, 0.5);
 }
 
-.artist-name {
+.artist-name-10 {
     position: absolute;
     width: 280px;
     height: 37px;
@@ -40,19 +40,23 @@
     font-size: 25px;
     line-height: 37px;
 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
     color: #ffffff;
 }
 
-.track-name-container {
+.track-name-container-10 {
     position: absolute;
     width: 280px;
     height: 27px;
-    margin-top: -2.5vw;
+    margin-top: -3vw;
 
     background: rgba(0, 0, 0, 0.5);
 }
 
-.track-name {
+.track-name-10 {
     position: absolute;
     width: 280px;
     height: 27px;
@@ -63,6 +67,245 @@
     font-weight: 500;
     font-size: 15px;
     line-height: 27px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    color: #ffffff;
+}
+
+.number-container-10 {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    margin-top: -19.65vw;
+
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 12px 0px 0px 0px;
+}
+
+.number-text-10 {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    padding-top: 0.2vw;
+
+    font-family: "AvenirMedium";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 40px;
+
+    color: #ffffff;
+}
+
+.track-card-container-18 {
+    position: relative;
+    width: 260px;
+    height: 260px;
+    display: inline-block;
+
+    background: #4a4a4a;
+    border-radius: 12px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 40px;
+}
+.track-card-18 {
+    position: relative;
+    width: 260px;
+    height: 260px;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 12px;
+}
+
+.artist-name-container-18 {
+    position: absolute;
+    width: 260px;
+    height: 37px;
+    margin-top: -6vw;
+
+    background: rgba(0, 0, 0, 0.6);
+    content-align: center;
+}
+
+.artist-name-18 {
+    position: absolute;
+    width: 260px;
+    height: 37px;
+    margin: 0 auto;
+
+    font-family: "AvenirMedium";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 37px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    color: #ffffff;
+}
+
+.track-name-container-18 {
+    position: absolute;
+    width: 260px;
+    height: 27px;
+    margin-top: -3vw;
+
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.track-name-18 {
+    position: absolute;
+    width: 260px;
+    height: 27px;
+    margin: 0 auto;
+
+    font-family: "AvenirMedium";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 27px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    color: #ffffff;
+}
+
+.number-container-18 {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    margin-top: -18.25vw;
+
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 12px 0px 0px 0px;
+}
+
+.number-text-18 {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+
+    font-family: "AvenirMedium";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 40px;
+
+    color: #ffffff;
+}
+
+.track-card-container-50 {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+
+    background: #4a4a4a;
+    border-radius: 12px;
+    margin-right: 12px;
+    margin-left: 12px;
+    margin-bottom: 24px;
+}
+.track-card-50 {
+    position: relative;
+    width: 200px;
+    height: 200px;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 12px;
+}
+
+.artist-name-container-50 {
+    position: absolute;
+    width: 200px;
+    height: 25px;
+    margin-top: -5vw;
+
+    background: rgba(0, 0, 0, 0.6);
+    content-align: center;
+}
+
+.artist-name-50 {
+    position: absolute;
+    width: 200px;
+    height: 25px;
+    margin: 0 auto;
+
+    font-family: "AvenirMedium";
+    font-style: normal;
+    font-weight: 560;
+    font-size: 14px;
+    line-height: 25px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    color: #ffffff;
+}
+
+.track-name-container-50 {
+    position: absolute;
+    width: 200px;
+    height: 20px;
+    margin-top: -3vw;
+
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.track-name-50 {
+    position: absolute;
+    width: 200px;
+    height: 20px;
+    margin: 0 auto;
+
+    font-family: "AvenirMedium";
+    font-style: normal;
+    font-weight: 560;
+    font-size: 13px;
+    line-height: 20px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    color: #ffffff;
+}
+
+.number-container-50 {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    margin: 0 auto;
+    margin-top: -14.1vw;
+
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 12px 0px 0px 0px;
+}
+
+.number-text-50 {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    margin: 0 auto;
+    padding-top: 0.2vw;
+
+    font-family: "AvenirMedium";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 35px;
 
     color: #ffffff;
 }
