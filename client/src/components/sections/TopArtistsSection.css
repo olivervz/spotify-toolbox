@@ -157,7 +157,7 @@
     align-items: center;
 
     color: #ffffff;
-    cursor: pointer;
+    transition: 0.25s all ease;
 }
 .select-50 {
     top: 0px;
@@ -182,4 +182,16 @@
 }
 .select-all-time {
     top: 372px;
+}
+
+.select-50:hover,
+.select-18:hover,
+.select-10:hover,
+.select-artists:hover,
+.select-tracks:hover,
+.select-4-weeks:hover,
+.select-6-months:hover,
+.select-all-time:hover {
+    cursor: pointer;
+    transform: scale(1.01);
 }

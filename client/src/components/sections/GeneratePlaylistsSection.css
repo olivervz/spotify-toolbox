@@ -1,7 +1,8 @@
 .generate-playlists-section {
     position: relative;
     z-index: 0;
-    height: 200vh;
     width: 100vw;
-    background-color: pink;
+    /* height: auto; */
+    height: 100vw;
+    background-color: rgb(255, 219, 231);
 }

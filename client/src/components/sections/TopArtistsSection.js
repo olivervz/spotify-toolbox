@@ -60,7 +60,7 @@ const TopArtistsSection = (props) => {
         <div className="top-artists-container">
             <div className="top-artists-title-container">
                 <div className="top-artists-title">
-                    <h1 className="top">Top </h1>
+                    <h1 className="top">Your top </h1>
                     <h1 className="number">{numberSelection}</h1>
                     <h1 className="artists-tracks">{artistsSelection}</h1>
                     {timeSelection !== "all time" ? (

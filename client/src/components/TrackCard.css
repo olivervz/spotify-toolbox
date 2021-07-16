@@ -9,6 +9,7 @@
     margin-right: 50.5px;
     margin-left: 50.5px;
     margin-bottom: 101px;
+    transition: all 0.5s ease;
 }
 .track-card-10 {
     position: relative;
@@ -17,6 +18,7 @@
 
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 12px;
+    transition: all 0.5s ease;
 }
 
 .artist-name-container-10 {
@@ -26,6 +28,7 @@
     margin-top: -5.9vw;
 
     background: rgba(0, 0, 0, 0.5);
+    transition: all 0.5s ease;
 }
 
 .artist-name-10 {
@@ -45,6 +48,7 @@
     text-overflow: ellipsis;
 
     color: #ffffff;
+    transition: all 0.5s ease;
 }
 
 .track-name-container-10 {
@@ -54,6 +58,7 @@
     margin-top: -3vw;
 
     background: rgba(0, 0, 0, 0.5);
+    transition: all 0.5s ease;
 }
 
 .track-name-10 {
@@ -73,6 +78,7 @@
     text-overflow: ellipsis;
 
     color: #ffffff;
+    transition: all 0.5s ease;
 }
 
 .number-container-10 {
@@ -84,6 +90,7 @@
 
     background: rgba(0, 0, 0, 0.4);
     border-radius: 12px 0px 0px 0px;
+    transition: all 0.5s ease;
 }
 
 .number-text-10 {
@@ -100,6 +107,7 @@
     line-height: 40px;
 
     color: #ffffff;
+    transition: all 0.5s ease;
 }
 
 .track-card-container-18 {
@@ -113,6 +121,7 @@
     margin-right: 20px;
     margin-left: 20px;
     margin-bottom: 40px;
+    transition: all 0.5s ease;
 }
 .track-card-18 {
     position: relative;
@@ -121,6 +130,7 @@
 
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 12px;
+    transition: all 0.5s ease;
 }
 
 .artist-name-container-18 {
@@ -131,6 +141,7 @@
 
     background: rgba(0, 0, 0, 0.6);
     content-align: center;
+    transition: all 0.5s ease;
 }
 
 .artist-name-18 {
@@ -150,6 +161,7 @@
     text-overflow: ellipsis;
 
     color: #ffffff;
+    transition: all 0.5s ease;
 }
 
 .track-name-container-18 {
@@ -159,6 +171,7 @@
     margin-top: -3vw;
 
     background: rgba(0, 0, 0, 0.5);
+    transition: all 0.5s ease;
 }
 
 .track-name-18 {
@@ -178,6 +191,7 @@
     text-overflow: ellipsis;
 
     color: #ffffff;
+    transition: all 0.5s ease;
 }
 
 .number-container-18 {
@@ -189,6 +203,7 @@
 
     background: rgba(0, 0, 0, 0.4);
     border-radius: 12px 0px 0px 0px;
+    transition: all 0.5s ease;
 }
 
 .number-text-18 {
@@ -204,6 +219,7 @@
     line-height: 40px;
 
     color: #ffffff;
+    transition: all 0.5s ease;
 }
 
 .track-card-container-50 {
@@ -217,6 +233,7 @@
     margin-right: 12px;
     margin-left: 12px;
     margin-bottom: 24px;
+    transition: all 0.5s ease;
 }
 .track-card-50 {
     position: relative;
@@ -225,6 +242,7 @@
 
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 12px;
+    transition: all 0.5s ease;
 }
 
 .artist-name-container-50 {
@@ -235,6 +253,7 @@
 
     background: rgba(0, 0, 0, 0.6);
     content-align: center;
+    transition: all 0.5s ease;
 }
 
 .artist-name-50 {
@@ -253,6 +272,7 @@
     text-overflow: ellipsis;
 
     color: #ffffff;
+    transition: all 0.5s ease;
 }
 
 .track-name-container-50 {
@@ -262,6 +282,7 @@
     margin-top: -3vw;
 
     background: rgba(0, 0, 0, 0.5);
+    transition: all 0.5s ease;
 }
 
 .track-name-50 {
@@ -281,6 +302,7 @@
     text-overflow: ellipsis;
 
     color: #ffffff;
+    transition: all 0.5s ease;
 }
 
 .number-container-50 {
@@ -292,6 +314,7 @@
 
     background: rgba(0, 0, 0, 0.4);
     border-radius: 12px 0px 0px 0px;
+    transition: all 0.5s ease;
 }
 
 .number-text-50 {
@@ -308,4 +331,12 @@
     line-height: 35px;
 
     color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.track-card-container-10,
+.track-card-container-18,
+.track-card-container-50:hover {
+    cursor: pointer;
+    transform: translate(0, -0.2vw);
 }

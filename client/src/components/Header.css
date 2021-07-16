@@ -62,6 +62,7 @@
     text-align: center;
 
     color: #ffffff;
+    transition: 0.25s all ease;
 }
 
 .generate-playlists {
@@ -84,6 +85,7 @@
     text-align: center;
 
     color: #ffffff;
+    transition: 0.25s all ease;
 }
 
 .discover-artists {
@@ -106,6 +108,7 @@
     text-align: center;
 
     color: #ffffff;
+    transition: 0.25s all ease;
 }
 .generate-playlists:hover,
 .discover-artists:hover,
@@ -125,6 +128,7 @@
     border: calc((2 / 1440) * 100vw) solid #25d977;
     box-sizing: border-box;
     border-radius: calc((4 / 1440) * 100vw);
+    transition: 0.25s all ease;
 }
 
 .logout-button-text {
@@ -145,13 +149,15 @@
     text-align: center;
 
     color: #25d977;
+    transition: 0.25s all ease;
 }
 
 .logout-button:hover {
-    border-color: #22b364;
+    border-color: white;
+    background-color: #22b364;
     cursor: pointer;
 }
 
 .logout-button-text:hover {
-    color: #22b364;
+    color: white;
 }
