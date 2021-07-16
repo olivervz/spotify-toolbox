@@ -35,7 +35,7 @@
 .about-text {
     position: absolute;
 
-    font-family: AvenirMedium;
+    font-family: "AvenirMedium";
     font-style: normal;
     font-weight: normal;
     font-size: calc((25 / 1440) * 100vw);

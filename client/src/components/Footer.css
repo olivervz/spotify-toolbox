@@ -48,7 +48,7 @@
     /* avenir footer text */
     margin: 0 auto;
 
-    font-family: AvenirMedium;
+    font-family: "AvenirMedium";
     font-style: normal;
     font-weight: normal;
     font-size: calc((25 / 1440) * 100vw);
@@ -74,7 +74,7 @@
 
     /* avenir footer text */
 
-    font-family: AvenirMedium;
+    font-family: "AvenirMedium";
     font-style: normal;
     font-weight: normal;
     font-size: calc((25 / 1440) * 100vw);

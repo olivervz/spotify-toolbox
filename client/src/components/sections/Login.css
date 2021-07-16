@@ -55,7 +55,7 @@
 
     /* avenir button text */
 
-    font-family: AvenirMedium;
+    font-family: "AvenirMedium";
     font-style: normal;
     font-weight: 600;
     font-size: max(15px, calc((30 / 1440) * 100vw));
