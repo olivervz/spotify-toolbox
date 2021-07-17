@@ -7,17 +7,22 @@ const fetchUser = async (token) => {
     headers["Accept"] = "application/json";
     headers["Content-Type"] = "application/json";
     headers["Authorization"] = "Bearer " + token;
-    const response = await axios.get(url, { headers: headers });
+    const response = await axios
+        .get(url, { headers: headers })
+        .catch((error) => {
+            console.error("server, fetch user", error);
+        });
     return response.data;
 };
 
 exports.Username = async (req, res) => {
     let token = req.query.token;
     const user = await fetchUser(token);
-    res.send(user.display_name);
+    res.json(user.display_name);
 };
+
 exports.ProfilePicture = async (req, res) => {
     let token = req.query.token;
     const user = await fetchUser(token);
-    res.send(user.images[0].url);
+    res.json(user.images[0].url);
 };

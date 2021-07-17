@@ -3,6 +3,8 @@ import "./ArtistCard.css";
 
 const ArtistCard = (props) => {
     var card;
+    const speed = 500;
+    const animation = "zoom-in";
     if (props.size === 10) {
         card = (
             <div
@@ -10,8 +12,8 @@ const ArtistCard = (props) => {
                 onClick={() => {
                     window.location.href = props.popupURL;
                 }}
-                data-aos="zoom-in"
-                data-aos-duration={1000 + props.number * 500}
+                data-aos={animation}
+                data-aos-duration={speed}
             >
                 <img
                     src={props.image}
@@ -33,8 +35,8 @@ const ArtistCard = (props) => {
                 onClick={() => {
                     window.location.href = props.popupURL;
                 }}
-                data-aos="zoom-in"
-                data-aos-duration={1000 + props.number * 500}
+                data-aos={animation}
+                data-aos-duration={speed}
             >
                 <img
                     src={props.image}
@@ -56,8 +58,8 @@ const ArtistCard = (props) => {
                 onClick={() => {
                     window.location.href = props.popupURL;
                 }}
-                data-aos="zoom-in"
-                data-aos-duration={1000 + props.number * 500}
+                data-aos={animation}
+                data-aos-duration={speed}
             >
                 <img
                     src={props.image}

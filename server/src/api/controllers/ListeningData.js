@@ -12,7 +12,11 @@ const fetchListeningData = async (token, type, time_range) => {
     headers["Accept"] = "application/json";
     headers["Content-Type"] = "application/json";
     headers["Authorization"] = "Bearer " + token;
-    const response = await axios.get(url, { headers: headers });
+    const response = await axios
+        .get(url, { headers: headers })
+        .catch((error) => {
+            console.error("server, fetch listening data", error);
+        });
     return response;
 };
 
@@ -22,5 +26,5 @@ exports.ListeningData = async (req, res) => {
     let time_range = req.query.time_range;
     const response = await fetchListeningData(token, type, time_range);
     const responseStr = JSON.stringify(response.data.items);
-    res.send(responseStr);
+    res.json(responseStr);
 };

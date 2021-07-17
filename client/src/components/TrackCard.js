@@ -3,7 +3,8 @@ import "./TrackCard.css";
 
 const TrackCard = (props) => {
     var card;
-    console.log(props.size);
+    const speed = 500;
+    const animation = "zoom-in";
 
     if (props.size === 10) {
         card = (
@@ -12,8 +13,8 @@ const TrackCard = (props) => {
                 onClick={() => {
                     window.location.href = props.popupURL;
                 }}
-                data-aos="zoom-in"
-                data-aos-duration={1000 + props.number * 500}
+                data-aos={animation}
+                data-aos-duration={speed}
             >
                 <img
                     src={props.image}
@@ -38,8 +39,8 @@ const TrackCard = (props) => {
                 onClick={() => {
                     window.location.href = props.popupURL;
                 }}
-                data-aos="zoom-in"
-                data-aos-duration={1000 + props.number * 500}
+                data-aos={animation}
+                data-aos-duration={speed}
             >
                 <img
                     src={props.image}
@@ -58,15 +59,14 @@ const TrackCard = (props) => {
             </div>
         );
     } else {
-        console.log(1000 + props.number * 500);
         card = (
             <div
                 className="artist-card-container-50"
                 onClick={() => {
                     window.location.href = props.popupURL;
                 }}
-                data-aos="zoom-in"
-                data-aos-duration={1000 + props.number * 500}
+                data-aos={animation}
+                data-aos-duration={speed}
             >
                 <img
                     src={props.image}

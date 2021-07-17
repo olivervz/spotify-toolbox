@@ -25,9 +25,13 @@ const Home = (props) => {
                 process.env.REACT_APP_API_URL +
                 "/Username?token=" +
                 props.access_token;
-            const response = await Axios.get(url);
-            setUsername(response.data);
-            return response;
+            await Axios.get(url)
+                .then((resp) => {
+                    setUsername(resp.data);
+                })
+                .catch((error) => {
+                    console.error("in fetch username", error);
+                });
         };
 
         const getProfilePicture = async () => {
@@ -35,9 +39,13 @@ const Home = (props) => {
                 process.env.REACT_APP_API_URL +
                 "/ProfilePicture?token=" +
                 props.access_token;
-            const response = await Axios.get(url);
-            setProfilePicture(response.data);
-            return response;
+            await Axios.get(url)
+                .then((resp) => {
+                    setProfilePicture(resp.data);
+                })
+                .catch((error) => {
+                    console.error("in fetch profile pic", error);
+                });
         };
 
         Aos.init({ duration: 1500 });

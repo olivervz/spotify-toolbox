@@ -17,7 +17,6 @@ const TopArtistsSection = (props) => {
     var activeList = [];
 
     useEffect(() => {
-        console.log("useEffect");
         const fetchListening = async (setter, type, timeRange) => {
             const url =
                 process.env.REACT_APP_API_URL +
@@ -27,8 +26,14 @@ const TopArtistsSection = (props) => {
                 type +
                 "&time_range=" +
                 timeRange;
-            const response = await Axios.get(url);
-            setter(response.data);
+            await Axios.get(url)
+                .then((resp) => {
+                    const data = JSON.parse(resp.data);
+                    setter(data);
+                })
+                .catch((error) => {
+                    console.error("in fetch listening", error);
+                });
         };
         fetchListening(setTopArtistsShort, "artists", "short_term");
         fetchListening(setTopArtistsMedium, "artists", "medium_term");

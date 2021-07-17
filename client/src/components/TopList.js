@@ -15,6 +15,7 @@ const TopList = (props) => {
                             <ArtistCard
                                 size={props.number}
                                 number={i}
+                                key={i}
                                 name={item.name}
                                 image={item.images[0].url}
                                 webURL={item.external_urls.spotify}
@@ -22,13 +23,11 @@ const TopList = (props) => {
                             />
                         );
                     } else {
-                        {
-                            console.log(list);
-                        }
                         return (
                             <TrackCard
                                 size={props.number}
                                 number={i}
+                                key={i}
                                 trackName={item.name}
                                 albumName={item.album.name}
                                 artistName={item.album.artists[0].name}

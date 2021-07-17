@@ -11,15 +11,11 @@ const Login = (props) => {
             const url =
                 process.env.REACT_APP_API_URL + "/Authorization?code=" + code;
             const response = await Axios.get(url);
-            if (response.data.error) {
-                console.error(response.data.error, response.error_description);
-                return null;
-            } else {
-                const token = response.data.access_token;
-                if (token) {
-                    props.updateToken(token);
-                }
+            const token = response.data.access_token;
+            if (!token) {
+                getAccessToken(code);
             }
+            props.updateToken(token);
         };
 
         // Check For Callback
@@ -34,7 +30,7 @@ const Login = (props) => {
 
     const getAuthorizationCode = () => {
         const scope =
-            "user-read-private user-read-email playlist-modify-public playlist-modify-private ugc-image-upload user-top-read";
+            "ugc-image-upload user-read-recently-played user-top-read playlist-modify-private playlist-modify-public user-read-private";
         const url =
             "https://accounts.spotify.com/authorize?" +
             queryString.stringify({
@@ -47,23 +43,23 @@ const Login = (props) => {
     };
     return (
         <div className="login-container">
-            {!props.callback ? (
-                <div>
-                    <h1 className="login-title">Spotify Toolbox</h1>
-                    <div className="login-button-container">
-                        <div
-                            className="login-button"
-                            onClick={getAuthorizationCode}
-                        >
-                            <h2 className="login-button-text">
-                                Log in with Spotify.
-                            </h2>
-                        </div>
+            {/* {!props.callback ? ( */}
+            <div>
+                <h1 className="login-title">Spotify Toolbox</h1>
+                <div className="login-button-container">
+                    <div
+                        className="login-button"
+                        onClick={getAuthorizationCode}
+                    >
+                        <h2 className="login-button-text">
+                            Log in with Spotify.
+                        </h2>
                     </div>
                 </div>
-            ) : (
+            </div>
+            {/* ) : (
                 ""
-            )}
+            )} */}
         </div>
     );
 };
