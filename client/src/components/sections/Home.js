@@ -18,6 +18,8 @@ import { useEffect, useState } from "react";
 const Home = (props) => {
     const [username, setUsername] = useState("");
     const [profilePicture, setProfilePicture] = useState("");
+    const [topArtists, setTopArtists] = useState([]);
+    const [topTracks, setTopTracks] = useState([]);
 
     useEffect(() => {
         const getUsername = async () => {
@@ -54,25 +56,27 @@ const Home = (props) => {
         getProfilePicture();
     }, [props.access_token]);
 
-    const linkTopArtists = () => {};
-    const linkDiscoverArtists = () => {};
-    const linkGeneratePlaylists = () => {};
-    const logout = () => {};
-
     return (
         <div>
-            <Header
-                linkTopArtists={linkTopArtists}
-                linkDiscoverArtists={linkDiscoverArtists}
-                linkGeneratePlaylists={linkGeneratePlaylists}
-                logout={logout}
-            />
+            <Header />
             <IntroSection username={username} profilePicture={profilePicture} />
             <Element name="top-artists-section">
-                <TopArtistsSection access_token={props.access_token} />
+                <TopArtistsSection
+                    access_token={props.access_token}
+                    setTopArtists={(artists) => {
+                        setTopArtists(artists);
+                    }}
+                    setTopTracks={(tracks) => {
+                        setTopTracks(tracks);
+                    }}
+                />
             </Element>
             <Element name="generate-playlists-section">
-                <GeneratePlaylistsSection access_token={props.access_token} />
+                {/* <GeneratePlaylistsSection
+                    access_token={props.access_token}
+                    topArtists={topArtists}
+                    topTracks={topTracks}
+                /> */}
             </Element>
             <Element name="discover-artists-section">
                 <DiscoverArtistsSection access_token={props.access_token} />

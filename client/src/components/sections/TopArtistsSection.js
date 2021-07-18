@@ -5,8 +5,10 @@ import TopList from "../TopList";
 import "./TopArtistsSection.css";
 
 const TopArtistsSection = (props) => {
-    const [numberSelection, setNumberSelection] = useState(10);
-    const [artistsSelection, setArtistsSelection] = useState("artists");
+    const [numberSelection, setNumberSelection] = useState(50);
+    // const [artistsSelection, setArtistsSelection] = useState("artists");
+    // const [timeSelection, setTimeSelection] = useState("4 weeks");
+    const [artistsSelection, setArtistsSelection] = useState("tracks");
     const [timeSelection, setTimeSelection] = useState("6 months");
     const [topArtistsShort, setTopArtistsShort] = useState([]);
     const [topArtistsMedium, setTopArtistsMedium] = useState([]);
@@ -28,8 +30,7 @@ const TopArtistsSection = (props) => {
                 timeRange;
             await Axios.get(url)
                 .then((resp) => {
-                    const data = JSON.parse(resp.data);
-                    setter(data);
+                    setter(resp.data.items);
                 })
                 .catch((error) => {
                     console.error("in fetch listening", error);
@@ -42,6 +43,11 @@ const TopArtistsSection = (props) => {
         fetchListening(setTopTracksMedium, "tracks", "medium_term");
         fetchListening(setTopTracksLong, "tracks", "long_term");
     }, []);
+
+    useEffect(() => {
+        props.setTopArtists(topArtistsShort);
+        props.setTopTracks(topTracksShort);
+    }, [topArtistsShort, topTracksShort]);
 
     if (artistsSelection === "tracks") {
         if (timeSelection === "4 weeks") {

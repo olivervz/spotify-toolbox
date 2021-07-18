@@ -25,6 +25,5 @@ exports.ListeningData = async (req, res) => {
     let type = req.query.type;
     let time_range = req.query.time_range;
     const response = await fetchListeningData(token, type, time_range);
-    const responseStr = JSON.stringify(response.data.items);
-    res.json(responseStr);
+    res.send(response.data);
 };
