@@ -71,7 +71,7 @@
 }
 .three-line {
     position: absolute;
-    width: calc((392 / 1440) * 100vw);
+    width: calc((400 / 1440) * 100vw);
     height: calc((41 / 1440) * 100vw);
     left: calc((584 / 1440) * 100vw);
     top: calc((189 / 1440) * 100vw);
