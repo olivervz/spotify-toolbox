@@ -5,7 +5,6 @@
     margin-top: -3vw;
 
     background: rgba(0, 0, 0, 0.5);
-    /* transition: all 0.5s ease; */
 }
 
 .track-name-10 {
@@ -25,7 +24,6 @@
     text-overflow: ellipsis;
 
     color: #ffffff;
-    /* transition: all 0.5s ease; */
 }
 
 .track-name-container-18 {
@@ -35,7 +33,6 @@
     margin-top: -3vw;
 
     background: rgba(0, 0, 0, 0.5);
-    /* transition: all 0.5s ease; */
 }
 
 .track-name-18 {
@@ -55,7 +52,6 @@
     text-overflow: ellipsis;
 
     color: #ffffff;
-    /* transition: all 0.5s ease; */
 }
 .track-name-container-50 {
     position: absolute;
@@ -64,7 +60,6 @@
     margin-top: -2.5vw;
 
     background: rgba(0, 0, 0, 0.5);
-    /* transition: all 0.5s ease; */
 }
 
 .track-name-50 {
@@ -84,5 +79,4 @@
     text-overflow: ellipsis;
 
     color: #ffffff;
-    /* transition: all 0.5s ease; */
 }
