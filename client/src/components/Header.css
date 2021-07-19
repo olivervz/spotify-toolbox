@@ -23,7 +23,7 @@
     font-style: normal;
     font-weight: bold;
     font-size: calc((50 / 1440) * 100vw);
-    line-height: 58px;
+    line-height: calc((58 / 1440) * 100vw);
     display: flex;
     align-items: center;
     text-align: center;
@@ -39,7 +39,8 @@
     height: calc((62 / 1440) * 100vw);
 
     background: #4a4a4a;
-    box-shadow: 0px 3px 15px 8px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px calc((3 / 1440) * 100vw) calc((15 / 1440) * 100vw)
+        calc((8 / 1440) * 100vw) rgba(0, 0, 0, 0.25);
 }
 
 .top-artists {
@@ -56,13 +57,13 @@
     font-style: normal;
     font-weight: normal;
     font-size: calc((25 / 1440) * 100vw);
-    line-height: 34px;
+    line-height: calc((34 / 1440) * 100vw);
     display: flex;
     align-items: center;
     text-align: center;
 
     color: #ffffff;
-    transition: 0.25s all ease;
+    transition: 0.25s color ease;
 }
 
 .generate-playlists {
@@ -79,13 +80,13 @@
     font-style: normal;
     font-weight: normal;
     font-size: calc((25 / 1440) * 100vw);
-    line-height: 34px;
+    line-height: calc((34 / 1440) * 100vw);
     display: flex;
     align-items: center;
     text-align: center;
 
     color: #ffffff;
-    transition: 0.25s all ease;
+    transition: 0.25s color ease;
 }
 
 .discover-artists {
@@ -102,13 +103,13 @@
     font-style: normal;
     font-weight: normal;
     font-size: calc((25 / 1440) * 100vw);
-    line-height: 34px;
+    line-height: calc((34 / 1440) * 100vw);
     display: flex;
     align-items: center;
     text-align: center;
 
     color: #ffffff;
-    transition: 0.25s all ease;
+    transition: 0.25s color ease;
 }
 .generate-playlists:hover,
 .discover-artists:hover,
@@ -125,15 +126,15 @@
     top: calc((9 / 1440) * 100vw);
 
     fill: none;
-    border: calc((2 / 1440) * 100vw) solid #25d977;
+    border: calc((1 / 1440) * 100vw) solid #25d977;
     box-sizing: border-box;
     border-radius: calc((4 / 1440) * 100vw);
-    transition: 0.25s all ease;
+    transition: 0.25s border ease, 0.25s background ease;
 }
 
 .logout-button-text {
     position: relative;
-    height: calc((40 / 1440) * 100vw);
+    height: calc((44 / 1440) * 100vw);
     justify-content: center;
     margin: 0 auto;
 
@@ -143,13 +144,13 @@
     font-style: normal;
     font-weight: normal;
     font-size: calc((25 / 1440) * 100vw);
-    line-height: calc((34 / 1440) * 100vw);
+    line-height: calc((44 / 1440) * 100vw);
     display: flex;
     align-items: center;
     text-align: center;
 
     color: #25d977;
-    transition: 0.25s all ease;
+    transition: 0.25s color ease;
 }
 
 .logout-button:hover {

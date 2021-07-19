@@ -19,7 +19,7 @@
 
 .top-artists-title {
     position: relative;
-    height: 100px;
+    height: calc((100 / 1440) * 100vw);
     top: 0px;
     margin: 0 auto;
 }
@@ -39,7 +39,7 @@
     font-family: "AvenirMedium";
     font-style: normal;
     font-size: calc((36 / 1440) * 100vw);
-    line-height: 49px;
+    line-height: calc((49 / 1440) * 100vw);
 
     color: #4a4a4a;
 }
@@ -96,13 +96,13 @@
     font-style: normal;
     font-weight: 500;
     font-size: calc((30 / 1440) * 100vw);
-    line-height: 41px;
+    line-height: calc((41 / 1440) * 100vw);
 
     display: flex;
     align-items: center;
 
     color: #ffffff;
-    transition: 0.25s all ease;
+    transition: 0.25s color ease;
 }
 .select-50 {
     top: 0px;
