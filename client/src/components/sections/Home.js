@@ -72,11 +72,12 @@ const Home = (props) => {
                 />
             </Element>
             <Element name="generate-playlists-section">
-                {/* <GeneratePlaylistsSection
+                <GeneratePlaylistsSection
                     access_token={props.access_token}
                     topArtists={topArtists}
                     topTracks={topTracks}
-                /> */}
+                    userID={username}
+                />
             </Element>
             <Element name="discover-artists-section">
                 <DiscoverArtistsSection access_token={props.access_token} />

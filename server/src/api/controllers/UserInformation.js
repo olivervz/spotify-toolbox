@@ -18,6 +18,7 @@ const fetchUser = async (token) => {
 exports.Username = async (req, res) => {
     let token = req.query.token;
     const user = await fetchUser(token);
+    console.log(user);
     res.json(user.display_name);
 };
 

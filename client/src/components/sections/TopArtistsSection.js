@@ -6,8 +6,6 @@ import "./TopArtistsSection.css";
 
 const TopArtistsSection = (props) => {
     const [numberSelection, setNumberSelection] = useState(50);
-    // const [artistsSelection, setArtistsSelection] = useState("artists");
-    // const [timeSelection, setTimeSelection] = useState("4 weeks");
     const [artistsSelection, setArtistsSelection] = useState("tracks");
     const [timeSelection, setTimeSelection] = useState("6 months");
     const [topArtistsShort, setTopArtistsShort] = useState([]);

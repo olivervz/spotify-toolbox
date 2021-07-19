@@ -2,7 +2,65 @@
     position: relative;
     z-index: 0;
     width: 100vw;
-    /* height: auto; */
-    height: 100vw;
-    background-color: rgb(255, 219, 231);
+    height: 200vw;
+    background-color: #ffc6a7;
+}
+
+.recommended-playlist-title-container {
+    position: relative;
+    width: 100vw;
+    height: 209px;
+    left: 0px;
+    text-align: center;
+}
+
+.recommended-playlist-title {
+    position: relative;
+    width: 651px;
+    height: 209px;
+
+    font-family: Avenir Next;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 85px;
+    line-height: 209px;
+    margin: 0 auto;
+
+    color: #4a4a4a;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.create-playlist-button {
+    /* create playlist */
+
+    position: absolute;
+    width: 300px;
+    top: 200px;
+    left: 1000px;
+
+    font-family: Avenir Next;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    margin: 0 auto;
+
+    color: #ffffff;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.refresh-playlist-button-container {
+    position: absolute;
+    width: 70px;
+    left: 900px;
+    top: 200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.refresh-playlist-button-container:hover,
+.create-playlist-button:hover {
+    cursor: pointer;
 }

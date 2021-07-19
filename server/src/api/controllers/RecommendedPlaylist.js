@@ -1,19 +1,20 @@
 let axios = require("axios");
 
-const fetchPlaylist = async (token, limit, trackIDs, artistIDs, genres) => {
+const fetchPlaylist = async (token, limit, trackIDs, artistIDs) => {
+    let market = "US";
     var url =
         "https://api.spotify.com/v1/recommendations?limit=" +
         limit +
         "&seed_artists=" +
-        artistIDs[0] +
-        "&seed_genres=" +
-        // genres[0] +
-        // fix this lol
-        "hip-hop,idm" +
+        artistIDs.slice(0, 2) +
         "&seed_tracks=" +
-        trackIDs.slice(0, 2) +
-        "&max_popularity=50" +
-        "&min_popularity=20";
+        trackIDs.slice(0, 3) +
+        "&seed_genres=" +
+        "&max_popularity=55" +
+        "&min_popularity=25" +
+        "&market=" +
+        market;
+
     var headers = {};
     headers["Accept"] = "application/json";
     headers["Content-Type"] = "application/json";
@@ -23,6 +24,7 @@ const fetchPlaylist = async (token, limit, trackIDs, artistIDs, genres) => {
         .catch((error) => {
             console.error("server, fetch recommended playlist", error);
         });
+    console.log(response);
     return response;
 };
 
@@ -31,13 +33,6 @@ exports.RecommendedPlaylist = async (req, res) => {
     let limit = req.query.limit;
     let trackIDs = req.query.seed_tracks.split(",");
     let artistIDs = req.query.seed_artists.split(",");
-    let genres = req.query.seed_genres.split(",");
-    const response = await fetchPlaylist(
-        token,
-        limit,
-        trackIDs,
-        artistIDs,
-        genres
-    );
+    const response = await fetchPlaylist(token, limit, trackIDs, artistIDs);
     res.send(response.data.tracks);
 };

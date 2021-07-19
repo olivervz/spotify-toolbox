@@ -6,45 +6,31 @@ import TrackCard from "../TrackCard";
 
 const GeneratePlaylistsSection = (props) => {
     const [generateFlag, setGenerateFlag] = useState(true);
+    const [successFlag, setSuccessFlag] = useState(null);
     const [recommendedPlaylist, setRecommendedPlaylist] = useState([]);
 
     const generateSeeds = () => {
-        // https://stackoverflow.com/questions/19269545/how-to-get-a-number-of-random-elements-from-an-array
-        const shuffledTracks = props.topTracks.sort(() => 0.5 - Math.random());
-        const shuffledArtists = props.topArtists.sort(
-            () => 0.5 - Math.random()
-        );
-
-        let allGenres = [];
-        for (let i = 0; i < shuffledArtists.length; ++i) {
-            for (let j = 0; j < shuffledArtists[i].genres.length; ++j) {
-                allGenres.push(shuffledArtists[i].genres[j]);
-            }
-        }
-
-        const shuffledGenres = allGenres.sort(() => 0.5 - Math.random());
-
         let trackIDs = [];
         let artistIDs = [];
-        let genres = [];
-
-        if (shuffledTracks.length !== 0) {
-            for (let i = 0; i < 5; ++i) {
-                trackIDs.push(shuffledTracks[i].id);
-                artistIDs.push(shuffledArtists[i].id);
-                if (shuffledGenres[i].indexOf(" ") !== -1) {
-                    let validGenre = shuffledGenres[i].replaceAll(" ", "-");
-                    genres.push(validGenre);
-                } else {
-                    genres.push(shuffledGenres[i]);
-                }
+        if (props.topTracks.length !== 0) {
+            for (let i = 0; i < 3; ++i) {
+                let randomTrack =
+                    props.topTracks[
+                        Math.floor(Math.random() * props.topTracks.length)
+                    ];
+                trackIDs.push(randomTrack.id);
+                let randomArtist =
+                    props.topArtists[
+                        Math.floor(Math.random() * props.topArtists.length)
+                    ];
+                artistIDs.push(randomArtist.id);
             }
 
-            generateRecommendedPlaylist(trackIDs, artistIDs, genres);
+            generateRecommendedPlaylist(trackIDs, artistIDs);
         }
     };
 
-    const generateRecommendedPlaylist = async (trackIDs, artistIDs, genres) => {
+    const generateRecommendedPlaylist = async (trackIDs, artistIDs) => {
         var limit = 20;
         const url =
             process.env.REACT_APP_API_URL +
@@ -53,18 +39,44 @@ const GeneratePlaylistsSection = (props) => {
             "&limit=" +
             limit +
             "&seed_artists=" +
-            trackIDs +
-            "&seed_tracks=" +
             artistIDs +
-            "&seed_genres=" +
-            genres;
-        setGenerateFlag(false);
+            "&seed_tracks=" +
+            trackIDs;
         await Axios.get(url)
             .then((resp) => {
                 setRecommendedPlaylist(resp.data);
             })
             .catch((error) => {
                 console.error("in generate playlist", error);
+            });
+        setGenerateFlag(false);
+    };
+
+    const createPlaylist = async () => {
+        var uriList = [];
+        for (let i = 0; i < recommendedPlaylist.length; ++i) {
+            uriList.push(recommendedPlaylist[i].uri);
+        }
+
+        var uris = uriList.join(",");
+
+        const url =
+            process.env.REACT_APP_API_URL +
+            "/BuildPlaylist?token=" +
+            props.access_token +
+            "&user_id=" +
+            props.userID +
+            "&uris=" +
+            uris;
+
+        await Axios.get(url)
+            .then((resp) => {
+                console.log(resp.data);
+                setSuccessFlag(true);
+            })
+            .catch((error) => {
+                console.error("in create playlist", error);
+                setSuccessFlag(false);
             });
     };
 
@@ -76,13 +88,74 @@ const GeneratePlaylistsSection = (props) => {
 
     return (
         <div className="generate-playlists-section">
-            <button
-                onClick={() => {
-                    setGenerateFlag(true);
-                }}
-            >
-                Refresh
-            </button>
+            <div className="recommended-playlist-title-container">
+                <h1 className="recommended-playlist-title">Recommended</h1>
+                <div
+                    className="refresh-playlist-button-container"
+                    onClick={() => {
+                        setGenerateFlag(true);
+                    }}
+                >
+                    <svg
+                        viewBox="0 0 53 53"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <g filter="url(#filter0_d)">
+                            <path
+                                d="M42.3865 6.60937C38.3058 2.53125 32.7054 0 26.4859 0C14.0469 0 4 10.0687 4 22.5C4 34.9313 14.0469 45 26.4859 45C36.9831 45 45.7355 37.8281 48.2402 28.125H42.3865C40.0788 34.6781 33.8311 39.375 26.4859 39.375C17.1707 39.375 9.60037 31.8094 9.60037 22.5C9.60037 13.1906 17.1707 5.625 26.4859 5.625C31.1576 5.625 35.3227 7.56563 38.3621 10.6313L29.3002 19.6875H49V0L42.3865 6.60937Z"
+                                fill="white"
+                            />
+                        </g>
+                        <defs>
+                            <filter
+                                id="filter0_d"
+                                x="0"
+                                y="0"
+                                width="53"
+                                height="53"
+                                filterUnits="userSpaceOnUse"
+                                color-interpolation-filters="sRGB"
+                            >
+                                <feFlood
+                                    flood-opacity="0"
+                                    result="BackgroundImageFix"
+                                />
+                                <feColorMatrix
+                                    in="SourceAlpha"
+                                    type="matrix"
+                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                />
+                                <feOffset dy="4" />
+                                <feGaussianBlur stdDeviation="2" />
+                                <feColorMatrix
+                                    type="matrix"
+                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                                />
+                                <feBlend
+                                    mode="normal"
+                                    in2="BackgroundImageFix"
+                                    result="effect1_dropShadow"
+                                />
+                                <feBlend
+                                    mode="normal"
+                                    in="SourceGraphic"
+                                    in2="effect1_dropShadow"
+                                    result="shape"
+                                />
+                            </filter>
+                        </defs>
+                    </svg>
+                </div>
+                <h3
+                    className="create-playlist-button"
+                    onClick={() => {
+                        createPlaylist();
+                    }}
+                >
+                    create playlist
+                </h3>
+            </div>
             <div className="top-list-container">
                 <ul className="top-list">
                     {recommendedPlaylist.map((item, i) => {
