@@ -8,6 +8,16 @@
     text-align: center;
 }
 
+.top-list-recommended-container {
+    position: relative;
+    width: calc((906 / 1440) * 100vw);
+    height: auto;
+    left: calc((267 / 1440) * 100vw);
+    top: calc((120 / 1440) * 100vw);
+    display: inline-block;
+    text-align: center;
+}
+
 .top-list {
     position: relative;
     list-style-type: none;

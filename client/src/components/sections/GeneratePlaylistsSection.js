@@ -31,6 +31,7 @@ const GeneratePlaylistsSection = (props) => {
     };
 
     const generateRecommendedPlaylist = async (trackIDs, artistIDs) => {
+        setGenerateFlag(false);
         var limit = 20;
         const url =
             process.env.REACT_APP_API_URL +
@@ -49,10 +50,10 @@ const GeneratePlaylistsSection = (props) => {
             .catch((error) => {
                 console.error("in generate playlist", error);
             });
-        setGenerateFlag(false);
     };
 
     const createPlaylist = async () => {
+        setGenerateFlag(null);
         var uriList = [];
         for (let i = 0; i < recommendedPlaylist.length; ++i) {
             uriList.push(recommendedPlaylist[i].uri);
@@ -90,10 +91,26 @@ const GeneratePlaylistsSection = (props) => {
         <div className="generate-playlists-section">
             <div className="recommended-playlist-title-container">
                 <h1 className="recommended-playlist-title">Recommended</h1>
+                {successFlag !== null ? (
+                    <div
+                        className={
+                            successFlag
+                                ? "create-playlist-success"
+                                : "create-playlist-failure"
+                        }
+                    >
+                        {successFlag
+                            ? "playlist created successfully"
+                            : "error creating playlist, please try again"}
+                    </div>
+                ) : (
+                    ""
+                )}
                 <div
                     className="refresh-playlist-button-container"
                     onClick={() => {
                         setGenerateFlag(true);
+                        setSuccessFlag(null);
                     }}
                 >
                     <svg
@@ -156,7 +173,7 @@ const GeneratePlaylistsSection = (props) => {
                     create playlist
                 </h3>
             </div>
-            <div className="top-list-container">
+            <div className="top-list-recommended-container">
                 <ul className="top-list">
                     {recommendedPlaylist.map((item, i) => {
                         return (
