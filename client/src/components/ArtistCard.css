@@ -242,5 +242,9 @@
 .artist-card-container-18:hover,
 .artist-card-container-50:hover {
     cursor: pointer;
-    transform: translate(0, -0.2vw);
+    top: -0.1vw;
+    filter: drop-shadow(
+        0px calc((8 / 1440) * 100vw) calc((8 / 1440) * 100vw)
+            rgba(0, 0, 0, 0.25)
+    );
 }

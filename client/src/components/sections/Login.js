@@ -43,23 +43,25 @@ const Login = (props) => {
     };
     return (
         <div className="login-container">
-            {/* {!props.callback ? ( */}
-            <div>
-                <h1 className="login-title">Spotify Toolbox</h1>
-                <div className="login-button-container">
-                    <div
-                        className="login-button"
-                        onClick={getAuthorizationCode}
-                    >
-                        <h2 className="login-button-text">
-                            Log in with Spotify.
-                        </h2>
+            {!props.callback ? (
+                <div>
+                    <h1 className="login-title">Spotify Toolbox</h1>
+                    <div className="login-button-container">
+                        <div
+                            className="login-button"
+                            onClick={getAuthorizationCode}
+                        >
+                            <h2 className="login-button-text">
+                                Log in with Spotify.
+                            </h2>
+                        </div>
                     </div>
                 </div>
-            </div>
-            {/* ) : (
-                ""
-            )} */}
+            ) : (
+                <div>
+                    <h1 className="login-loading">Loading...</h1>
+                </div>
+            )}
         </div>
     );
 };

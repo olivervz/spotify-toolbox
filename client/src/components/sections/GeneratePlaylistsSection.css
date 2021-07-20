@@ -19,7 +19,7 @@
     position: relative;
     top: calc((60 / 1440) * 100vw);
 
-    font-family: Avenir Next;
+    font-family: "AvenirMedium";
     font-style: normal;
     font-weight: 600;
     font-size: calc((30 / 1440) * 100vw);
@@ -36,7 +36,7 @@
     position: relative;
     top: calc((60 / 1440) * 100vw);
 
-    font-family: Avenir Next;
+    font-family: "AvenirMedium";
     font-style: normal;
     font-weight: 600;
     font-size: calc((30 / 1440) * 100vw);
@@ -54,7 +54,7 @@
     width: calc((651 / 1440) * 100vw);
     height: calc((209 / 1440) * 100vw);
 
-    font-family: Avenir Next;
+    font-family: "AvenirMedium";
     font-style: normal;
     font-weight: 500;
     font-size: calc((85 / 1440) * 100vw);
@@ -75,7 +75,7 @@
     top: calc((200 / 1440) * 100vw);
     left: calc((750 / 1440) * 100vw);
 
-    font-family: Avenir Next;
+    font-family: "AvenirMedium";
     font-style: normal;
     font-weight: 600;
     font-size: calc((40 / 1440) * 100vw);
@@ -105,7 +105,7 @@
     top: calc((200 / 1440) * 100vw);
     left: calc((320 / 1440) * 100vw);
 
-    font-family: Avenir Next;
+    font-family: "AvenirMedium";
     font-style: normal;
     font-weight: 600;
     font-size: calc((40 / 1440) * 100vw);
