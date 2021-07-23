@@ -24,7 +24,6 @@ const fetchPlaylist = async (token, limit, trackIDs, artistIDs) => {
         .catch((error) => {
             console.error("server, fetch recommended playlist", error);
         });
-    console.log(response);
     return response;
 };
 

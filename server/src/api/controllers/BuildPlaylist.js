@@ -46,8 +46,6 @@ exports.BuildPlaylist = async (req, res) => {
     let urlUris = req.query.uris.replace(/,/g, "%2C").replace(/:/g, "%3A");
     let uris = req.query.uris;
     var response = await createPlaylist(token, user_id);
-    console.log("createPlaylist response", response.status);
     response = await populatePlaylist(token, response.data.id, uris, urlUris);
-    console.log("populatePlaylist response", response.status);
     res.send(response.data);
 };

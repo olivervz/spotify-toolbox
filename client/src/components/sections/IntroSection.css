@@ -1,15 +1,14 @@
 .intro-section-container {
     position: relative;
-    top: calc((62 / 1440) * 100vw);
     width: 100vw;
-    height: 100vh;
+    height: auto;
     background-color: #4a4a4a;
 }
 
 .intro-container {
-    position: absolute;
+    position: relative;
     width: 100vw;
-    height: calc((533 / 1440) * 100vw);
+    height: calc((433 / 1440) * 100vw);
 }
 
 .profile-picture {
@@ -117,10 +116,10 @@
 }
 
 .arrow-container {
-    position: absolute;
+    position: relative;
     width: 100vw;
     height: calc((58 / 900) * 100vw);
-    top: calc((500 / 1440) * 100vw);
+    /* top: calc((500 / 1440) * 100vw); */
     display: flex;
     justify-content: center;
 }

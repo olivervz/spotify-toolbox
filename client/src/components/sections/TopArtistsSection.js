@@ -190,6 +190,7 @@ const TopArtistsSection = (props) => {
                 number={numberSelection}
                 list={activeList}
                 artists={artistsSelection === "artists" ? true : false}
+                mobile={props.mobile}
             />
         </div>
     );

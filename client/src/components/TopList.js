@@ -1,6 +1,7 @@
 import React from "react";
 import ArtistCard from "./ArtistCard";
 import TrackCard from "./TrackCard";
+import ArtistTrackCard from "./ArtistTrackCard";
 import "./TopList.css";
 
 const TopList = (props) => {
@@ -12,19 +13,23 @@ const TopList = (props) => {
                 {list.map((item, i) => {
                     if (props.artists) {
                         return (
-                            <ArtistCard
+                            <ArtistTrackCard
                                 size={props.number}
                                 number={i}
                                 key={i}
-                                name={item.name}
+                                trackName={null}
+                                albumName={null}
+                                artistName={item.name}
                                 image={item.images[0].url}
                                 webURL={item.external_urls.spotify}
                                 popupURL={item.uri}
+                                previewURL={null}
+                                mobile={props.mobile}
                             />
                         );
                     } else {
                         return (
-                            <TrackCard
+                            <ArtistTrackCard
                                 size={props.number}
                                 number={i}
                                 key={i}
@@ -35,6 +40,7 @@ const TopList = (props) => {
                                 webURL={item.external_urls.spotify}
                                 popupURL={item.uri}
                                 previewURL={item.preview_url}
+                                mobile={props.mobile}
                             />
                         );
                     }

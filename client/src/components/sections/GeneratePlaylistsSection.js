@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Axios from "axios";
 import "./GeneratePlaylistsSection.css";
 import TrackCard from "../TrackCard";
+import ArtistTrackCard from "../ArtistTrackCard";
 
 const GeneratePlaylistsSection = (props) => {
     const [generateFlag, setGenerateFlag] = useState(true);
@@ -72,7 +73,6 @@ const GeneratePlaylistsSection = (props) => {
 
         await Axios.get(url)
             .then((resp) => {
-                console.log(resp);
                 setSuccessFlag(true);
             })
             .catch((error) => {
@@ -87,13 +87,19 @@ const GeneratePlaylistsSection = (props) => {
         }
     });
 
-    console.log(window.innerWidth);
     return (
         <div className="generate-playlists-section">
             <div className="recommended-playlist-title-container">
-                <h1 className="recommended-playlist-title">Recommended</h1>
+                <h1
+                    className="recommended-playlist-title"
+                    data-aos="fade-in"
+                    data-aos-duration="500"
+                >
+                    Recommended
+                </h1>
                 {successFlag !== null ? (
                     <div
+                        data-aos="fade-in"
                         className={
                             successFlag
                                 ? "create-playlist-success"
@@ -107,76 +113,19 @@ const GeneratePlaylistsSection = (props) => {
                 ) : (
                     ""
                 )}
-                {window.innerWidth > 500 ? (
-                    <div
-                        className="refresh-playlist-button-container"
-                        onClick={() => {
-                            setGenerateFlag(true);
-                            setSuccessFlag(null);
-                        }}
-                    >
-                        <svg
-                            viewBox="0 0 53 53"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <g filter="url(#filter0_d)">
-                                <path
-                                    d="M42.3865 6.60937C38.3058 2.53125 32.7054 0 26.4859 0C14.0469 0 4 10.0687 4 22.5C4 34.9313 14.0469 45 26.4859 45C36.9831 45 45.7355 37.8281 48.2402 28.125H42.3865C40.0788 34.6781 33.8311 39.375 26.4859 39.375C17.1707 39.375 9.60037 31.8094 9.60037 22.5C9.60037 13.1906 17.1707 5.625 26.4859 5.625C31.1576 5.625 35.3227 7.56563 38.3621 10.6313L29.3002 19.6875H49V0L42.3865 6.60937Z"
-                                    fill="white"
-                                />
-                            </g>
-                            <defs>
-                                <filter
-                                    id="filter0_d"
-                                    x="0"
-                                    y="0"
-                                    width="53"
-                                    height="53"
-                                    filterUnits="userSpaceOnUse"
-                                    color-interpolation-filters="sRGB"
-                                >
-                                    <feFlood
-                                        flood-opacity="0"
-                                        result="BackgroundImageFix"
-                                    />
-                                    <feColorMatrix
-                                        in="SourceAlpha"
-                                        type="matrix"
-                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                                    />
-                                    <feOffset dy="4" />
-                                    <feGaussianBlur stdDeviation="2" />
-                                    <feColorMatrix
-                                        type="matrix"
-                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-                                    />
-                                    <feBlend
-                                        mode="normal"
-                                        in2="BackgroundImageFix"
-                                        result="effect1_dropShadow"
-                                    />
-                                    <feBlend
-                                        mode="normal"
-                                        in="SourceGraphic"
-                                        in2="effect1_dropShadow"
-                                        result="shape"
-                                    />
-                                </filter>
-                            </defs>
-                        </svg>
-                    </div>
-                ) : (
-                    <div
-                        className="refresh-playlist-button-mobile"
-                        onClick={() => {
-                            setGenerateFlag(true);
-                        }}
-                    >
-                        refresh
-                    </div>
-                )}
+                <div
+                    data-aos="fade-in"
+                    data-aos-duration="500"
+                    className="refresh-playlist-button"
+                    onClick={() => {
+                        setGenerateFlag(true);
+                    }}
+                >
+                    refresh
+                </div>
                 <h3
+                    data-aos="fade-in"
+                    data-aos-duration="500"
                     className="create-playlist-button"
                     onClick={() => {
                         createPlaylist();
@@ -189,7 +138,7 @@ const GeneratePlaylistsSection = (props) => {
                 <ul className="top-list">
                     {recommendedPlaylist.map((item, i) => {
                         return (
-                            <TrackCard
+                            <ArtistTrackCard
                                 size={props.number}
                                 number={i}
                                 key={i}
@@ -200,6 +149,7 @@ const GeneratePlaylistsSection = (props) => {
                                 webURL={item.external_urls.spotify}
                                 popupURL={item.uri}
                                 previewURL={item.preview_url}
+                                mobile={props.mobile}
                             />
                         );
                     })}

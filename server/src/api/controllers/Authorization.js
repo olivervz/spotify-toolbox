@@ -1,8 +1,6 @@
 let request = require("request");
 
 exports.Authorization = (req, res) => {
-    console.log("req", req);
-    console.log("res", res);
     let code = req.query.code;
     let authOptions = {
         url: "https://accounts.spotify.com/api/token",

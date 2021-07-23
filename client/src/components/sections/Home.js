@@ -20,6 +20,7 @@ const Home = (props) => {
     const [profilePicture, setProfilePicture] = useState("");
     const [topArtists, setTopArtists] = useState([]);
     const [topTracks, setTopTracks] = useState([]);
+    const [mobileState, setMobileState] = useState(false);
 
     useEffect(() => {
         const getUsername = async () => {
@@ -50,16 +51,25 @@ const Home = (props) => {
                 });
         };
 
+        const checkForMobile = () => {
+            setMobileState(window.innerWidth <= 960);
+        };
+
         Aos.init({ duration: 1500 });
 
         getUsername();
         getProfilePicture();
+        window.addEventListener("resize", checkForMobile);
     }, [props.access_token]);
 
     return (
         <div>
             <Header />
-            <IntroSection username={username} profilePicture={profilePicture} />
+            <IntroSection
+                username={username}
+                profilePicture={profilePicture}
+                mobile={mobileState}
+            />
             <Element name="top-artists-section">
                 <TopArtistsSection
                     access_token={props.access_token}
@@ -69,6 +79,7 @@ const Home = (props) => {
                     setTopTracks={(tracks) => {
                         setTopTracks(tracks);
                     }}
+                    mobile={mobileState}
                 />
             </Element>
             <Element name="generate-playlists-section">
@@ -77,12 +88,13 @@ const Home = (props) => {
                     topArtists={topArtists}
                     topTracks={topTracks}
                     userID={username}
+                    mobile={mobileState}
                 />
             </Element>
             <Element name="discover-artists-section">
                 <DiscoverArtistsSection access_token={props.access_token} />
             </Element>
-            <Footer first="about" second="privacy" />
+            <Footer first="about" second="privacy" mobile={mobileState} />
         </div>
     );
 };
