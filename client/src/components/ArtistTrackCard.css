@@ -11,6 +11,7 @@
 }
 
 .card-image {
+    position: relative;
     height: 280px;
     width: 280px;
 }
@@ -18,13 +19,14 @@
 .card-artist-container {
     position: relative;
     width: 280px;
+    display: table-cell;
     margin: 0 auto;
-    margin-top: -3px;
+    top: -3px;
     background: rgba(0, 0, 0, 0.5);
 }
 
 .card-artist-text {
-    font-family: Avenir Next;
+    font-family: "AvenirMedium";
     font-style: normal;
     font-weight: 500;
     font-size: 25px;
@@ -44,12 +46,12 @@
     position: relative;
     width: 280px;
     margin: 0 auto;
-    margin-top: 5px;
+    margin-top: 3px;
     background: rgba(0, 0, 0, 0.5);
 }
 
 .card-track-text {
-    font-family: Avenir Next;
+    font-family: "AvenirMedium";
     font-style: normal;
     font-weight: 500;
     font-size: 17px;
@@ -91,11 +93,11 @@
 }
 
 .card-artist-text-mobile {
-    font-family: Avenir Next;
+    font-family: "AvenirMedium";
     font-style: normal;
     font-weight: 500;
     font-size: 7px;
-    line-height: 12px;
+    line-height: 13px;
     margin: 0 auto;
     padding-left: 1px;
     padding-right: 1px;
@@ -116,7 +118,7 @@
 }
 
 .card-track-text-mobile {
-    font-family: Avenir Next;
+    font-family: "AvenirMedium";
     font-style: normal;
     font-weight: 500;
     font-size: 5px;
