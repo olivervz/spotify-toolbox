@@ -20,7 +20,9 @@ const Home = (props) => {
     const [profilePicture, setProfilePicture] = useState("");
     const [topArtists, setTopArtists] = useState([]);
     const [topTracks, setTopTracks] = useState([]);
-    const [mobileState, setMobileState] = useState(false);
+    const [mobileState, setMobileState] = useState(
+        window.innerWidth <= 960 ? true : false
+    );
 
     useEffect(() => {
         const getUsername = async () => {

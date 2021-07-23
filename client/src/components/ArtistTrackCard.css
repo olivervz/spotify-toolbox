@@ -1,0 +1,140 @@
+.card-container {
+    position: relative;
+    height: auto;
+    width: 280px;
+    background-color: #4a4a4a;
+    box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.4);
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.card-image {
+    height: 280px;
+    width: 280px;
+}
+
+.card-artist-container {
+    position: relative;
+    width: 280px;
+    margin: 0 auto;
+    margin-top: -3px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.card-artist-text {
+    font-family: Avenir Next;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 35px;
+    margin: 0 auto;
+    padding-left: 4px;
+    padding-right: 4px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    color: #ffffff;
+}
+
+.card-track-container {
+    position: relative;
+    width: 280px;
+    margin: 0 auto;
+    margin-top: 5px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.card-track-text {
+    font-family: Avenir Next;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 30px;
+    margin: 0 auto;
+    padding-left: 4px;
+    padding-right: 4px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    color: #ffffff;
+}
+
+.card-container-mobile {
+    position: relative;
+    height: auto;
+    width: 70px;
+    background-color: #4a4a4a;
+    box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.4);
+    display: inline-block;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: 4px;
+}
+
+.card-image-mobile {
+    height: 70px;
+    width: 70px;
+}
+
+.card-artist-container-mobile {
+    position: relative;
+    width: 70px;
+    margin: 0 auto;
+    margin-top: -3px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.card-artist-text-mobile {
+    font-family: Avenir Next;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 7px;
+    line-height: 12px;
+    margin: 0 auto;
+    padding-left: 1px;
+    padding-right: 1px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    color: #ffffff;
+}
+
+.card-track-container-mobile {
+    position: relative;
+    width: 70px;
+    margin: 0 auto;
+    margin-top: 2px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.card-track-text-mobile {
+    font-family: Avenir Next;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 5px;
+    line-height: 8px;
+    margin: 0 auto;
+    padding-left: 1px;
+    padding-right: 1px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    color: #ffffff;
+}
+
+.card-container:hover,
+.card-container-mobile:hover {
+    cursor: pointer;
+    top: -0.1vw;
+    filter: drop-shadow(0px 12px 12px rgba(0, 0, 0, 0.25));
+}
