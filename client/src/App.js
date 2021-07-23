@@ -10,47 +10,51 @@ import Home from "./components/sections/Home";
 import About from "./components/sections/About";
 import Privacy from "./components/sections/Privacy";
 import Footer from "./components/Footer";
+import { useCookies } from "react-cookie";
 
 function App() {
-    const [token, setToken] = useState("");
+    const [cookies, setCookie] = useCookies(["token"]);
 
-    const updateToken = (tok) => {
-        window.history.replaceState(null, null, "/home");
-        setToken(tok);
+    const updateToken = (token) => {
+        setCookie("token", token);
+        window.location.href = process.env.REACT_APP_BASE_URL + "/home";
     };
 
     return (
         <div>
-            {token === "" ? (
-                <Router>
-                    <Switch>
-                        <Route exact path="/">
-                            <Redirect to="/login" />
-                        </Route>
-                        <Route path="/login">
-                            <Login
-                                callback={false}
-                                updateToken={(tok) => updateToken(tok)}
-                            />
-                            <Footer first="about" second="privacy" />
-                        </Route>
-                        <Route path="/callback">
-                            <Login
-                                callback={true}
-                                updateToken={(tok) => updateToken(tok)}
-                            />
-                        </Route>
-                        <Route path="/privacy">
-                            <Privacy />
-                        </Route>
-                        <Route path="/about">
-                            <About />
-                        </Route>
-                    </Switch>
-                </Router>
-            ) : (
-                <Home access_token={token} />
-            )}
+            <Router>
+                <Switch>
+                    <Route exact path="/">
+                        {console.log("/")}
+                        <Redirect to="/login" />
+                    </Route>
+                    <Route path="/login">
+                        {console.log("/login, callback false")}
+                        <Login
+                            callback={false}
+                            updateToken={(tok) => updateToken(tok)}
+                        />
+                        <Footer first="about" second="privacy" />
+                    </Route>
+                    <Route path="/callback">
+                        {console.log("/login, callback true")}
+                        <Login
+                            callback={true}
+                            updateToken={(tok) => updateToken(tok)}
+                        />
+                    </Route>
+                    <Route path="/privacy">
+                        <Privacy />
+                    </Route>
+                    <Route path="/about">
+                        <About />
+                    </Route>
+                    <Route path="/home">
+                        {console.log("/home")}
+                        <Home access_token={cookies.token} />
+                    </Route>
+                </Switch>
+            </Router>
         </div>
     );
 }

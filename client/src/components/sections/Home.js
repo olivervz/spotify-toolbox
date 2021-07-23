@@ -16,6 +16,7 @@ import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
 
 const Home = (props) => {
+    console.log(props);
     const [username, setUsername] = useState("");
     const [profilePicture, setProfilePicture] = useState("");
     const [topArtists, setTopArtists] = useState([]);
@@ -58,6 +59,8 @@ const Home = (props) => {
         };
 
         Aos.init({ duration: 1500 });
+
+        console.log(props.access_token);
 
         getUsername();
         getProfilePicture();
