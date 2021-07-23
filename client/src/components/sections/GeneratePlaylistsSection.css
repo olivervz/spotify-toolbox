@@ -71,9 +71,9 @@
     /* create playlist */
 
     position: absolute;
-    width: calc((300 / 1440) * 100vw);
+    width: calc((450 / 1440) * 100vw);
     top: calc((200 / 1440) * 100vw);
-    left: calc((750 / 1440) * 100vw);
+    left: calc((690 / 1440) * 100vw);
 
     font-family: "AvenirMedium";
     font-style: normal;

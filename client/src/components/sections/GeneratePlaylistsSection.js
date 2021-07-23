@@ -2,7 +2,6 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Axios from "axios";
 import "./GeneratePlaylistsSection.css";
-import TrackCard from "../TrackCard";
 import ArtistTrackCard from "../ArtistTrackCard";
 
 const GeneratePlaylistsSection = (props) => {
@@ -134,7 +133,13 @@ const GeneratePlaylistsSection = (props) => {
                     create playlist
                 </h3>
             </div>
-            <div className="top-list-recommended-container">
+            <div
+                className={
+                    !props.mobile
+                        ? "top-list-recommended-container"
+                        : "top-list-container-mobile"
+                }
+            >
                 <ul className="top-list">
                     {recommendedPlaylist.map((item, i) => {
                         return (

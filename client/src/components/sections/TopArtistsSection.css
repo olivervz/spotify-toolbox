@@ -140,3 +140,50 @@
     cursor: pointer;
     transform: scale(1.01);
 }
+
+.edit-parameters-container-mobile {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 20px;
+    width: 90vw;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: -15px;
+}
+
+.select-50-mobile,
+.select-18-mobile,
+.select-10-mobile,
+.select-artists-mobile,
+.select-tracks-mobile,
+.select-4-weeks-mobile,
+.select-6-months-mobile,
+.select-all-time-mobile {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+    font-family: "AvenirMedium";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+
+    transition: 0.25s color ease;
+}
+
+.select-10-mobile,
+.select-tracks-mobile {
+    padding-right: 13px;
+}
+
+.select-50-mobile:hover,
+.select-18-mobile:hover,
+.select-10-mobile:hover,
+.select-artists-mobile:hover,
+.select-tracks-mobile:hover,
+.select-4-weeks-mobile:hover,
+.select-6-months-mobile:hover,
+.select-all-time-mobile:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+}

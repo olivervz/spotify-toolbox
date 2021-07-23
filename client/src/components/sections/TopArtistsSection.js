@@ -80,9 +80,15 @@ const TopArtistsSection = (props) => {
                     <h1 className="time-period">{timeSelection}</h1>
                 </div>
             </div>
-            <div className="edit-parameters-container">
+            <div
+                className={
+                    !props.mobile
+                        ? "edit-parameters-container"
+                        : "edit-parameters-container-mobile"
+                }
+            >
                 <h3
-                    className="select-50"
+                    className={!props.mobile ? "select-50" : "select-50-mobile"}
                     onClick={() => {
                         setNumberSelection(50);
                     }}
@@ -96,6 +102,7 @@ const TopArtistsSection = (props) => {
                 </h3>
                 <h3
                     className="select-18"
+                    className={!props.mobile ? "select-18" : "select-18-mobile"}
                     onClick={() => {
                         setNumberSelection(18);
                     }}
@@ -109,6 +116,7 @@ const TopArtistsSection = (props) => {
                 </h3>
                 <h3
                     className="select-10"
+                    className={!props.mobile ? "select-10" : "select-10-mobile"}
                     onClick={() => {
                         setNumberSelection(10);
                     }}
@@ -122,6 +130,11 @@ const TopArtistsSection = (props) => {
                 </h3>
                 <h3
                     className="select-artists"
+                    className={
+                        !props.mobile
+                            ? "select-artists"
+                            : "select-artists-mobile"
+                    }
                     onClick={() => {
                         setArtistsSelection("tracks");
                     }}
@@ -135,6 +148,9 @@ const TopArtistsSection = (props) => {
                 </h3>
                 <h3
                     className="select-tracks"
+                    className={
+                        !props.mobile ? "select-tracks" : "select-tracks-mobile"
+                    }
                     onClick={() => {
                         setArtistsSelection("artists");
                     }}
@@ -148,6 +164,11 @@ const TopArtistsSection = (props) => {
                 </h3>
                 <h3
                     className="select-4-weeks"
+                    className={
+                        !props.mobile
+                            ? "select-4-weeks"
+                            : "select-4-weeks-mobile"
+                    }
                     onClick={() => {
                         setTimeSelection("4 weeks");
                     }}
@@ -161,6 +182,11 @@ const TopArtistsSection = (props) => {
                 </h3>
                 <h3
                     className="select-6-months"
+                    className={
+                        !props.mobile
+                            ? "select-6-months"
+                            : "select-6-months-mobile"
+                    }
                     onClick={() => {
                         setTimeSelection("6 months");
                     }}
@@ -173,7 +199,11 @@ const TopArtistsSection = (props) => {
                     6 months
                 </h3>
                 <h3
-                    className="select-all-time"
+                    className={
+                        !props.mobile
+                            ? "select-all-time"
+                            : "select-all-time-mobile"
+                    }
                     onClick={() => {
                         setTimeSelection("all time");
                     }}
