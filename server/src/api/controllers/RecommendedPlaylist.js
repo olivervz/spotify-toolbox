@@ -2,6 +2,13 @@ let axios = require("axios");
 
 const fetchPlaylist = async (token, limit, trackIDs, artistIDs) => {
     let market = "US";
+    while (trackIDs.length < 3) {
+        trackIDs.push("");
+    }
+    while (artistIDs.length < 2) {
+        artistIDs.push("");
+    }
+
     var url =
         "https://api.spotify.com/v1/recommendations?limit=" +
         limit +

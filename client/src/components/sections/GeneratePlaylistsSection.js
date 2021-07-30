@@ -8,26 +8,37 @@ const GeneratePlaylistsSection = (props) => {
     const [generateFlag, setGenerateFlag] = useState(true);
     const [successFlag, setSuccessFlag] = useState(null);
     const [recommendedPlaylist, setRecommendedPlaylist] = useState([]);
+    const [seedArtists, setSeedArtists] = useState([]);
+    const [seedTracks, setSeedTracks] = useState([]);
 
     const generateSeeds = () => {
         let trackIDs = [];
         let artistIDs = [];
-        if (props.topTracks.length !== 0) {
-            for (let i = 0; i < 3; ++i) {
+        let tracks = [];
+        let artists = [];
+        for (let i = 0; i < 3; ++i) {
+            if (props.topTracks.length !== 0) {
                 let randomTrack =
                     props.topTracks[
                         Math.floor(Math.random() * props.topTracks.length)
                     ];
                 trackIDs.push(randomTrack.id);
+                tracks.push(
+                    randomTrack.name + " - " + randomTrack.artists[0].name
+                );
+            }
+            if (props.topArtists.length !== 0) {
                 let randomArtist =
                     props.topArtists[
                         Math.floor(Math.random() * props.topArtists.length)
                     ];
                 artistIDs.push(randomArtist.id);
+                artists.push(randomArtist.name);
             }
-
-            generateRecommendedPlaylist(trackIDs, artistIDs);
         }
+        setSeedArtists(artists);
+        setSeedTracks(tracks);
+        generateRecommendedPlaylist(trackIDs, artistIDs);
     };
 
     const generateRecommendedPlaylist = async (trackIDs, artistIDs) => {
@@ -68,7 +79,11 @@ const GeneratePlaylistsSection = (props) => {
             "&user_id=" +
             props.userID +
             "&uris=" +
-            uris;
+            uris +
+            "&seed_tracks=" +
+            seedTracks +
+            "&seed_artists=" +
+            seedArtists;
 
         await Axios.get(url)
             .then((resp) => {
@@ -81,7 +96,11 @@ const GeneratePlaylistsSection = (props) => {
     };
 
     useEffect(() => {
-        if (generateFlag) {
+        if (
+            generateFlag &&
+            props.topTracks.length !== 0 &&
+            props.topArtists.length !== 0
+        ) {
             generateSeeds();
         }
     });

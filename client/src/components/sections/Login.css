@@ -17,13 +17,10 @@
     font-style: normal;
     font-weight: bold;
 
-    font-size: max(50px, calc((90 / 1440) * 100vw));
-    line-height: 104px;
-    display: flex;
-    align-items: center;
-    text-align: center;
+    font-size: max(65px, calc((90 / 1440) * 100vw));
+    line-height: max(65px, calc((90 / 1440) * 100vw));
 
-    color: #25d977;
+    color: white;
 }
 
 .login-button-container {
@@ -39,7 +36,7 @@
     height: calc((96 / 900) * 100vh);
     margin: 0 auto;
     background: #25d977;
-    box-shadow: 0px 16px 16px rgba(0, 0, 0, 0.4), 0px 12px 0px #198a4c,
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.4), 0px 6px 0px #198a4c,
         inset 0px 0px 3px rgba(255, 255, 255, 0.5),
         inset 0px 1px 0px rgba(255, 255, 255, 0.3);
     border-radius: 8px;
@@ -58,7 +55,7 @@
     font-family: "AvenirMedium";
     font-style: normal;
     font-weight: 600;
-    font-size: max(15px, calc((30 / 1440) * 100vw));
+    font-size: max(18px, calc((30 / 1440) * 100vw));
     line-height: 100%;
     text-shadow: 0px 4px 4px 0px rgb(0, 0, 0, 0.4) inset;
 
@@ -83,14 +80,11 @@
     line-height: 100%;
     text-shadow: 0px 4px 4px 0px rgb(0, 0, 0, 0.4) inset;
 
-    color: #25d977;
+    color: white;
 }
 
 .login-button:hover {
-    box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.4), 0px 10px 0px #198a4c,
-        inset 0px 0px 3px rgba(255, 255, 255, 0.5),
-        inset 0px 1px 0px rgba(255, 255, 255, 0.3);
-    transform: translate(0px, 2px);
+    background-color: #22bf68;
 
     cursor: pointer;
 }
@@ -98,6 +92,7 @@
 .login-button:active {
     box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.4), inset 0px 8px 0px #198a4c,
         inset 0px 10px 10px rgba(0, 0, 0, 0.5);
+    background-color: #22bf68;
     transform: translate(0px, 11px);
     cursor: pointer;
 }

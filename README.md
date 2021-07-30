@@ -8,7 +8,6 @@
 
 TODO:
 
--   cookies
 -   change name
 -   fix footer mobile
 -   change background color from green

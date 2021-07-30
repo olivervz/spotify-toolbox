@@ -16,14 +16,10 @@ import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
 
 const Home = (props) => {
-    console.log(props);
     const [username, setUsername] = useState("");
     const [profilePicture, setProfilePicture] = useState("");
     const [topArtists, setTopArtists] = useState([]);
     const [topTracks, setTopTracks] = useState([]);
-    const [mobileState, setMobileState] = useState(
-        window.innerWidth <= 960 ? true : false
-    );
 
     useEffect(() => {
         const getUsername = async () => {
@@ -54,17 +50,10 @@ const Home = (props) => {
                 });
         };
 
-        const checkForMobile = () => {
-            setMobileState(window.innerWidth <= 960);
-        };
-
         Aos.init({ duration: 1500 });
-
-        console.log(props.access_token);
 
         getUsername();
         getProfilePicture();
-        window.addEventListener("resize", checkForMobile);
     }, [props.access_token]);
 
     return (
@@ -73,7 +62,7 @@ const Home = (props) => {
             <IntroSection
                 username={username}
                 profilePicture={profilePicture}
-                mobile={mobileState}
+                mobile={props.mobile}
             />
             <Element name="top-artists-section">
                 <TopArtistsSection
@@ -84,7 +73,7 @@ const Home = (props) => {
                     setTopTracks={(tracks) => {
                         setTopTracks(tracks);
                     }}
-                    mobile={mobileState}
+                    mobile={props.mobile}
                 />
             </Element>
             <Element name="generate-playlists-section">
@@ -93,13 +82,13 @@ const Home = (props) => {
                     topArtists={topArtists}
                     topTracks={topTracks}
                     userID={username}
-                    mobile={mobileState}
+                    mobile={props.mobile}
                 />
             </Element>
             <Element name="discover-artists-section">
                 <DiscoverArtistsSection access_token={props.access_token} />
             </Element>
-            <Footer first="about" second="privacy" mobile={mobileState} />
+            <Footer first="about" second="privacy" mobile={props.mobile} />
         </div>
     );
 };

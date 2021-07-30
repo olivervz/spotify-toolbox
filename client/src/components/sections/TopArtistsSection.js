@@ -65,6 +65,8 @@ const TopArtistsSection = (props) => {
         }
     }
 
+    const white = "#ffffff";
+
     return (
         <div className="top-artists-container">
             <div className="top-artists-title-container">
@@ -95,7 +97,7 @@ const TopArtistsSection = (props) => {
                     style={
                         numberSelection === 50
                             ? { color: "#4a4a4a" }
-                            : { color: "white" }
+                            : { color: white }
                     }
                 >
                     50
@@ -109,7 +111,7 @@ const TopArtistsSection = (props) => {
                     style={
                         numberSelection === 18
                             ? { color: "#4a4a4a" }
-                            : { color: "white" }
+                            : { color: white }
                     }
                 >
                     18
@@ -123,7 +125,7 @@ const TopArtistsSection = (props) => {
                     style={
                         numberSelection === 10
                             ? { color: "#4a4a4a" }
-                            : { color: "white" }
+                            : { color: white }
                     }
                 >
                     10
@@ -141,7 +143,7 @@ const TopArtistsSection = (props) => {
                     style={
                         artistsSelection === "tracks"
                             ? { color: "#4a4a4a" }
-                            : { color: "white" }
+                            : { color: white }
                     }
                 >
                     tracks
@@ -157,7 +159,7 @@ const TopArtistsSection = (props) => {
                     style={
                         artistsSelection === "artists"
                             ? { color: "#4a4a4a" }
-                            : { color: "white" }
+                            : { color: white }
                     }
                 >
                     artists
@@ -175,7 +177,7 @@ const TopArtistsSection = (props) => {
                     style={
                         timeSelection === "4 weeks"
                             ? { color: "#4a4a4a" }
-                            : { color: "white" }
+                            : { color: white }
                     }
                 >
                     4 weeks
@@ -193,7 +195,7 @@ const TopArtistsSection = (props) => {
                     style={
                         timeSelection === "6 months"
                             ? { color: "#4a4a4a" }
-                            : { color: "white" }
+                            : { color: white }
                     }
                 >
                     6 months
@@ -210,7 +212,7 @@ const TopArtistsSection = (props) => {
                     style={
                         timeSelection === "all time"
                             ? { color: "#4a4a4a" }
-                            : { color: "white" }
+                            : { color: white }
                     }
                 >
                     all time

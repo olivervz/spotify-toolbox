@@ -28,7 +28,7 @@
     align-items: center;
     text-align: center;
 
-    color: #25d977;
+    color: white;
 }
 
 .sticky-header-container {
@@ -126,7 +126,8 @@
     top: calc((9 / 1440) * 100vw);
 
     fill: none;
-    border: calc((1 / 1440) * 100vw) solid #25d977;
+    /* border: calc((1 / 1440) * 100vw) solid rgb(255, 46, 46); */
+    border: calc((1 / 1440) * 100vw) solid white;
     box-sizing: border-box;
     border-radius: calc((4 / 1440) * 100vw);
     transition: 0.25s border ease, 0.25s background ease;
@@ -149,13 +150,13 @@
     align-items: center;
     text-align: center;
 
-    color: #25d977;
+    color: white;
     transition: 0.25s color ease;
 }
 
 .logout-button:hover {
     border-color: white;
-    background-color: #22b364;
+    background-color: #7c7c7c;
     cursor: pointer;
 }
 

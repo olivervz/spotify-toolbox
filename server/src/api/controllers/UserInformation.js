@@ -12,7 +12,9 @@ const fetchUser = async (token) => {
         .catch((error) => {
             console.error("server, fetch user", error);
         });
-    return response.data;
+    if (!response || response.status === 200) {
+        return response.data;
+    }
 };
 
 exports.Username = async (req, res) => {

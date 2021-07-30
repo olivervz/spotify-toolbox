@@ -70,7 +70,7 @@
 }
 .three-line {
     position: absolute;
-    width: calc((400 / 1440) * 100vw);
+    width: calc((500 / 1440) * 100vw);
     height: calc((41 / 1440) * 100vw);
     left: calc((584 / 1440) * 100vw);
     top: calc((189 / 1440) * 100vw);
@@ -119,7 +119,7 @@
     position: relative;
     width: 100vw;
     height: calc((58 / 900) * 100vw);
-    /* top: calc((500 / 1440) * 100vw); */
+    margin-top: 20px;
     display: flex;
     justify-content: center;
 }

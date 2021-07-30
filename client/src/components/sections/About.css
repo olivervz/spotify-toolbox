@@ -1,17 +1,17 @@
 .about-container {
-    position: absolute;
+    position: relative;
     background-color: #4a4a4a;
     height: 100vh;
     width: 100vw;
 }
 
 .about-title {
-    position: absolute;
-    margin: 0;
+    position: relative;
     width: calc((739 / 1440) * 100vw);
     height: calc((150 / 900) * 100vh);
     left: calc((358 / 1440) * 100vw);
     top: calc((125 / 900) * 100vh);
+    margin: 0;
 
     font-family: GillSansBold;
     font-style: normal;
@@ -25,15 +25,15 @@
 }
 
 .about-text-container {
-    position: absolute;
+    position: relative;
     width: calc((724 / 1440) * 100vw);
-    height: calc((542 / 900) * 100vh);
+    height: calc((625 / 900) * 100vh);
     left: calc((358 / 1440) * 100vw);
-    top: calc((230 / 900) * 100vh);
+    top: calc((75 / 900) * 100vh);
 }
 
 .about-text {
-    position: absolute;
+    position: relative;
 
     font-family: "AvenirMedium";
     font-style: normal;

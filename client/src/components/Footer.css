@@ -8,10 +8,10 @@
 }
 .github-icon-container {
     position: absolute;
-    width: calc((60 / 1440) * 100vw);
-    height: calc((60 / 1440) * 100vw);
+    width: max(65px, calc((60 / 1440) * 100vw));
+    height: max(65px, calc((60 / 1440) * 100vw));
     left: 3vh;
-    top: calc((7 / 900) * 100vh);
+    top: calc((12 / 900) * 100vh);
 }
 
 .github-icon {
@@ -20,20 +20,15 @@
     right: 8.32%;
     top: 8.33%;
     bottom: 10.6%;
+    fill: white;
     transition: all 0.3s ease;
-}
-
-.github-icon:hover {
-    transform: scale(1.05);
-    transition: all 0.3s ease;
-    cursor: pointer;
 }
 
 .footer-links {
     position: absolute;
     width: calc((91 / 1440) * 100vw);
     height: calc((73 / 900) * 100vh);
-    right: 3vh;
+    right: max(30px, 2vw);
     top: 0px;
     text-align: left;
 }
@@ -43,7 +38,7 @@
     width: calc((68 / 1440) * 100vw);
     height: calc((34 / 900) * 100vh);
     left: calc((2 / 1440) * 100vw);
-    top: calc((3 / 900) * 100vh);
+    top: calc((12 / 900) * 100vh);
 
     /* avenir footer text */
     margin: 0 auto;
@@ -51,17 +46,11 @@
     font-family: "AvenirMedium";
     font-style: normal;
     font-weight: normal;
-    font-size: calc((25 / 1440) * 100vw);
+    font-size: max(25px, calc((25 / 1440) * 100vw));
     line-height: calc((34 / 900) * 100vh);
 
     transition: all 0.3s ease;
-    color: #25d977;
-}
-
-.footer-first:hover {
-    color: #20b965;
-    transition: all 0.3s ease;
-    cursor: pointer;
+    color: white;
 }
 
 .footer-second {
@@ -69,7 +58,7 @@
     width: calc((82 / 1440) * 100vw);
     height: calc((34 / 900) * 100vh);
     left: calc((2 / 1440) * 100vw);
-    top: calc((37 / 900) * 100vh);
+    top: calc((47 / 900) * 100vh);
     margin: 0 auto;
 
     /* avenir footer text */
@@ -77,15 +66,85 @@
     font-family: "AvenirMedium";
     font-style: normal;
     font-weight: normal;
-    font-size: calc((25 / 1440) * 100vw);
+    font-size: max(25px, calc((25 / 1440) * 100vw));
     line-height: calc((34 / 900) * 100vh);
 
     transition: all 0.3s ease;
-    color: #25d977;
+    color: white;
 }
 
-.footer-second:hover {
-    color: #20b965;
-    transition: all 0.3s ease;
+.footer-first:hover,
+.footer-second:hover,
+.github-icon:hover,
+.footer-first-mobile:hover,
+.footer-second-mobile:hover,
+.github-icon-mobile:hover {
+    color: #ffffffa8;
+    fill: #ffffffa8;
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.footer-container-mobile {
+    position: relative;
+    background-color: #4a4a4a;
+    width: 100vw;
+    height: 50px;
+    margin: 0 auto;
+    padding-bottom: 2vh;
+}
+.github-icon-container-mobile {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    left: 20px;
+    top: 10px;
+}
+
+.github-icon-mobile {
+    position: relative;
+    fill: white;
+    transition: all 0.3s ease;
+}
+
+.footer-links-mobile {
+    position: absolute;
+    width: 90px;
+    right: 10px;
+    top: 0px;
+    text-align: left;
+}
+
+.footer-first-mobile {
+    position: absolute;
+
+    /* avenir footer text */
+    margin: 0 auto;
+    top: 10px;
+
+    font-family: "AvenirMedium";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 25px;
+
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.footer-second-mobile {
+    position: absolute;
+    margin: 0 auto;
+    top: 40px;
+
+    /* avenir footer text */
+
+    font-family: "AvenirMedium";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 25px;
+
+    transition: all 0.3s ease;
+    color: white;
 }
