@@ -137,6 +137,7 @@ const GeneratePlaylistsSection = (props) => {
                     className="refresh-playlist-button"
                     onClick={() => {
                         setGenerateFlag(true);
+                        setSuccessFlag(null);
                     }}
                 >
                     refresh
