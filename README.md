@@ -9,6 +9,4 @@
 TODO:
 
 -   change name
--   fix footer mobile
--   change background color from green
 -   Mobile login screen

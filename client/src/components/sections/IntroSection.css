@@ -148,3 +148,121 @@
         transform: translateY(-15px);
     }
 }
+
+/*mobile*/
+
+.intro-container-mobile {
+    position: relative;
+    width: 100vw;
+}
+
+.profile-picture-mobile {
+    position: relative;
+    width: 100px;
+    height: 100px;
+
+    background: #c4c4c4;
+    border-radius: 10000000px;
+}
+
+.one-line-mobile {
+    position: absolute;
+    width: calc((74 / 1440) * 100vw);
+    height: calc((41 / 1440) * 100vw);
+    left: calc((584 / 1440) * 100vw);
+    top: calc((90 / 1440) * 100vw);
+    margin: 0 auto;
+
+    /* avenir h3 */
+
+    font-family: "AvenirMedium";
+    font-style: normal;
+    font-weight: 600;
+    font-size: calc((30 / 1440) * 100vw);
+    line-height: calc((41 / 1440) * 100vw);
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #ffffff;
+}
+.two-line-mobile {
+    position: absolute;
+    width: calc((318 / 1440) * 100vw);
+    height: calc((58 / 1440) * 100vw);
+    left: calc((584 / 1440) * 100vw);
+    top: calc((131 / 1440) * 100vw);
+    margin: 0 auto;
+
+    /* subtitle */
+
+    font-family: GillSansBold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: calc((50 / 1440) * 100vw);
+    line-height: calc((58 / 1440) * 100vw);
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #25d977;
+}
+.three-line-mobile {
+    position: absolute;
+    width: calc((500 / 1440) * 100vw);
+    height: calc((41 / 1440) * 100vw);
+    left: calc((584 / 1440) * 100vw);
+    top: calc((189 / 1440) * 100vw);
+    margin: 0 auto;
+
+    /* avenir h3 */
+
+    font-family: "AvenirMedium";
+    font-style: normal;
+    font-weight: 600;
+    font-size: calc((30 / 1440) * 100vw);
+    line-height: calc((41 / 1440) * 100vw);
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #ffffff;
+}
+.four-line-mobile {
+    position: absolute;
+    width: calc((511 / 1440) * 100vw);
+    height: calc((41 / 1440) * 100vw);
+    left: calc((464 / 1440) * 100vw);
+    top: calc((330 / 1440) * 100vw);
+    margin: 0 auto;
+
+    /* avenir h3 */
+
+    font-family: "AvenirMedium";
+    font-style: normal;
+    font-weight: 600;
+    font-size: calc((30 / 1440) * 100vw);
+    line-height: calc((41 / 1440) * 100vw);
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #ffffff;
+}
+
+.arrow-container-mobile {
+    position: relative;
+    width: 100vw;
+    height: calc((58 / 900) * 100vw);
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}

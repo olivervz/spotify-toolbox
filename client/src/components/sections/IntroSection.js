@@ -34,20 +34,22 @@ const IntroSection = (props) => {
 
     const introMobile = (
         <div className="intro-section-container">
-            <div className="intro-container">
+            <div className="intro-container-mobile">
                 <img
-                    className="profile-picture"
+                    className="profile-picture-mobile"
                     src={props.profilePicture}
                     alt="user"
                 ></img>
-                <h3 className="one-line">Hello</h3>
-                <h2 className="two-line">{props.username}</h2>
-                <h3 className="three-line">Welcome to Spotify Toolbox</h3>
-                <h3 className="four-line">
+                <h3 className="one-line-mobile">Hello</h3>
+                <h2 className="two-line-mobile">{props.username}</h2>
+                <h3 className="three-line-mobile">
+                    Welcome to Spotify Toolbox
+                </h3>
+                <h3 className="four-line-mobile">
                     Unlock more for your Spotify profile
                 </h3>
             </div>
-            <div className="arrow-container">
+            <div className="arrow-container-mobile">
                 <svg
                     className="arrow"
                     viewBox="0 0 60 60"

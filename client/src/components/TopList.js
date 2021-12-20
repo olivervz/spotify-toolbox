@@ -15,7 +15,13 @@ const TopList = (props) => {
         >
             <ul className="top-list">
                 {list.map((item, i) => {
+                    let image =
+                        "https://pbs.twimg.com/profile_images/425274582581264384/X3QXBN8C.jpeg";
+                    console.log(item);
                     if (props.artists) {
+                        if (item.images.length > 0) {
+                            image = item.images[0].url;
+                        }
                         return (
                             <ArtistTrackCard
                                 size={props.number}
@@ -24,7 +30,7 @@ const TopList = (props) => {
                                 trackName={null}
                                 albumName={null}
                                 artistName={item.name}
-                                image={item.images[0].url}
+                                image={image}
                                 webURL={item.external_urls.spotify}
                                 popupURL={item.uri}
                                 previewURL={null}
@@ -32,6 +38,9 @@ const TopList = (props) => {
                             />
                         );
                     } else {
+                        if (item.album.images.length > 0) {
+                            image = item.album.images[0].url;
+                        }
                         return (
                             <ArtistTrackCard
                                 size={props.number}
@@ -40,7 +49,7 @@ const TopList = (props) => {
                                 trackName={item.name}
                                 albumName={item.album.name}
                                 artistName={item.album.artists[0].name}
-                                image={item.album.images[0].url}
+                                image={image}
                                 webURL={item.external_urls.spotify}
                                 popupURL={item.uri}
                                 previewURL={item.preview_url}
