@@ -17,7 +17,6 @@ const TopList = (props) => {
                 {list.map((item, i) => {
                     let image =
                         "https://pbs.twimg.com/profile_images/425274582581264384/X3QXBN8C.jpeg";
-                    console.log(item);
                     if (props.artists) {
                         if (item.images.length > 0) {
                             image = item.images[0].url;

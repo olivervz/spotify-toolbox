@@ -10,7 +10,7 @@ const IntroSection = (props) => {
                     src={props.profilePicture}
                     alt="user"
                 ></img>
-                <h3 className="one-line">Hello</h3>
+                <h3 className="one-line">Hello/h3>
                 <h2 className="two-line">{props.username}</h2>
                 <h3 className="three-line">Welcome to Spotify Toolbox</h3>
                 <h3 className="four-line">
@@ -42,9 +42,7 @@ const IntroSection = (props) => {
                 ></img>
                 <h3 className="one-line-mobile">Hello</h3>
                 <h2 className="two-line-mobile">{props.username}</h2>
-                <h3 className="three-line-mobile">
-                    Welcome to Spotify Toolbox
-                </h3>
+                <h3 className="three-line-mobile">Welcome to Spotify Toolbo</h3>
                 <h3 className="four-line-mobile">
                     Unlock more for your Spotify profile
                 </h3>
